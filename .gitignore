@@ -1,3 +1,6 @@
+# Dependency and framework build output
+node_modules/
+.next/
 # OpenNext
 .open-next
 

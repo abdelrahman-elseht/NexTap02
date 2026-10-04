@@ -1,6 +1,8 @@
 # Phase 2 hardening gap analysis
 
-Status: planning only. This audit was performed in `F:\projects\NexTap02-phase2`, branch `phase2-hardening`, based on the imported implementation snapshot. No Supabase project was linked, no migration was pushed, and no Worker was deployed.
+Status: planning only. This audit was performed in `F:\projects\NexTap02-phase1-hardening`, branch `phase1-hardening`, based on the imported implementation snapshot. No Supabase project was linked, no migration was pushed, and no Worker was deployed. The operating assumptions in [OPERATING_TARGETS.md](OPERATING_TARGETS.md) are user-selected planning inputs; they are not provider-verified launch gates.
+
+Operating targets and their provider/physical verification steps are recorded in [OPERATING_TARGETS.md](OPERATING_TARGETS.md). That artifact does not change the four external gates below or claim readiness.
 
 ## Repository baseline
 
