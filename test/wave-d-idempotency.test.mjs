@@ -25,6 +25,26 @@ test('first request commits and a matching request replays its committed respons
   assert.equal(calls, 1);
 });
 
+test('matching committed replay is returned before a stale expected-version check', async () => {
+  const adapter = createMemoryTransactionAdapter();
+  const input = {
+    adapter, idempotencyKey: 'wave-d-version-replay', scope: 'cards.write', actor: 'actor-1', resource: 'card-1',
+    request: { body: { status: 'active' } }, authorize: () => true,
+    expectedVersion: 1, actualVersion: 1, operation: () => ({ version: 2 }),
+  };
+  assert.equal((await executeIdempotent(input)).kind, 'committed');
+  const replay = await executeIdempotent({ ...input, expectedVersion: 1, actualVersion: 2 });
+  assert.equal(replay.kind, 'replay');
+  assert.deepEqual(replay.response, { version: 2 });
+});
+
+test('equal idempotency keys are isolated by actor', async () => {
+  const adapter = createMemoryTransactionAdapter();
+  const common = { adapter, idempotencyKey: 'same-key', scope: 'cards.write', resource: 'card-1', request: { body: { status: 'active' } }, authorize: () => true };
+  assert.equal((await executeIdempotent({ ...common, actor: 'actor-1', operation: () => 'one' })).kind, 'committed');
+  assert.equal((await executeIdempotent({ ...common, actor: 'actor-2', operation: () => 'two' })).kind, 'committed');
+});
+
 test('canonical request digest ignores object key order but changes payload', () => {
   const first = canonicalRequestDigest({ method: 'post', path: '/cards', body: { b: 2, a: 1 } });
   assert.equal(first, canonicalRequestDigest({ method: 'POST', path: '/cards', body: { a: 1, b: 2 } }));

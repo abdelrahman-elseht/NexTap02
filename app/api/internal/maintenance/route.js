@@ -23,14 +23,13 @@ function runtimeDependencies() {
 
 function responseBody({ status, code, message, id, data }) {
   const body = data === undefined ? { error: { code, message, requestId: id } } : { data, requestId: id };
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      'cache-control': 'no-store',
-      'content-type': 'application/json; charset=utf-8',
-      'x-request-id': id,
-    },
-  });
+  const headers = {
+    'cache-control': 'no-store',
+    'content-type': 'application/json; charset=utf-8',
+    'x-request-id': id,
+  };
+  if (status === 405) headers.allow = 'POST';
+  return new Response(JSON.stringify(body), { status, headers });
 }
 
 function safeMessage(error, status) {
@@ -77,7 +76,7 @@ export async function POST(request) {
   }
 }
 
-export async function GET(request) {
-  const id = requestId(request);
-  return responseBody({ status: 409, code: 'method_not_allowed', message: 'The maintenance request could not be completed.', id });
+export function GET() {
+  const id = requestId();
+  return responseBody({ status: 405, code: 'method_not_allowed', message: 'The maintenance request could not be completed.', id });
 }

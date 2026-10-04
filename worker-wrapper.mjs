@@ -10,7 +10,7 @@ function isNextImageRequest(request) {
   return pathname === '/_next/image' || pathname === '/_next/image/';
 }
 
-export function withServerRequestId(response, requestId = crypto.randomUUID()) {
+export function withServerRequestId(response, requestId = response.headers.get('x-request-id') ?? crypto.randomUUID()) {
   const wrapped = new Response(response.body, response);
   wrapped.headers.set('x-request-id', requestId);
   return wrapped;
@@ -21,6 +21,6 @@ export { BucketCachePurge, DOQueueHandler, DOShardedTagCache };
 export default {
   async fetch(request, env, ctx) {
     const response = await generatedWorker.fetch(request, env, ctx);
-    return isNextImageRequest(request) ? withServerRequestId(response) : response;
+    return withServerRequestId(response);
   },
 };

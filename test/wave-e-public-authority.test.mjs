@@ -144,6 +144,17 @@ test('Wave E image authority checks current eligibility and image reference', as
   assert.equal(published.image.id, 'image-1');
 });
 
+test('Wave E missing image object resolves safely as not found', async () => {
+  const result = await resolveFreshImage({
+    environment: 'staging', imageId: 'image-1',
+    resolveEligibility: async () => eligible(),
+    resolveRevision: async () => revision(),
+    resolveImageReference: async () => ({ kind: 'current', image: { id: 'image-1', businessId: 'business-1', contentRevision: 4 } }),
+    loadImageObject: async () => null,
+  });
+  assert.deepEqual(result, { kind: 'not_found' });
+});
+
 test('Wave E image dependency failure is unavailable and authority factory preserves injection', async () => {
   const authority = createFreshAuthority({
     environment: 'staging',

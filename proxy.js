@@ -18,6 +18,9 @@ export function proxy(request) {
     });
   }
   if (!isPublicPage) {
+    // Custom API routes own their response envelope and request ID. The proxy
+    // must not overwrite an ID that must agree with a JSON error body.
+    if (request.nextUrl.pathname.startsWith('/api/')) return NextResponse.next();
     return withRequestId(NextResponse.next(), requestId);
   }
 

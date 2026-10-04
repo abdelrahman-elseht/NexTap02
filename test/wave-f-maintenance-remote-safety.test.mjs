@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { runMaintenance, assertMaintenanceConfiguration } from '../lib/maintenance.mjs';
-import { POST } from '../app/api/internal/maintenance/route.js';
+import { POST, GET } from '../app/api/internal/maintenance/route.js';
 
 function fakeCandidates(items) {
   const records = new Map(items.map((item) => [item.id, { ...item, state: 'pending' }]));
@@ -64,6 +64,24 @@ test('maintenance deletes unreferenced objects, completes missing objects, skips
   assert.deepEqual(deleted, ['old-key']);
 });
 
+test('maintenance retains candidates when current-reference authority is unknown', async () => {
+  const candidates = fakeCandidates([{ id: 'unknown', storageObjectKey: 'unknown-key' }]);
+  candidates.isCurrentReference = async () => undefined;
+  const deleted = [];
+  const result = await runMaintenance({ candidates, objectStore: { async delete(key) { deleted.push(key); } } });
+  assert.equal(result.deleted, 0);
+  assert.equal(result.retryableFailures, 1);
+  assert.deepEqual(deleted, []);
+  assert.equal(candidates.calls.retryable[0].details.error.code, 'reference_state_unknown');
+});
+
+test('maintenance GET is rejected with the documented method status', async () => {
+  const response = await GET(new Request('http://localhost/api/internal/maintenance'));
+  assert.equal(response.status, 405);
+  assert.equal(response.headers.get('allow'), 'POST');
+  assert.match(response.headers.get('x-request-id'), UUID);
+});
+
 test('maintenance bounds candidate work and rejects invalid limits', async () => {
   const candidates = fakeCandidates([
     { id: 'one', storageObjectKey: 'one' },
@@ -96,13 +114,16 @@ test.after(() => {
   else globalThis.__NEXTAP_MAINTENANCE__ = originalRuntime;
 });
 
-test('internal route fails closed and propagates request IDs on safe auth/status responses', async () => {
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+test('internal route fails closed and generates server request IDs on safe auth/status responses', async () => {
   delete process.env.NEXTAP_MAINTENANCE_SECRET;
   delete process.env.NEXTAP_ENVIRONMENT_ID;
   delete globalThis.__NEXTAP_MAINTENANCE__;
   const disabled = await POST(new Request('http://localhost/api/internal/maintenance', { method: 'POST', headers: { 'x-request-id': 'wave-f-disabled' } }));
   assert.equal(disabled.status, 503);
-  assert.equal(disabled.headers.get('x-request-id'), 'wave-f-disabled');
+  assert.match(disabled.headers.get('x-request-id'), UUID);
+  assert.notEqual(disabled.headers.get('x-request-id'), 'wave-f-disabled');
 
   process.env.NEXTAP_MAINTENANCE_SECRET = 'secret';
   process.env.NEXTAP_ENVIRONMENT_ID = 'staging';
@@ -113,11 +134,13 @@ test('internal route fails closed and propagates request IDs on safe auth/status
 
   const unauthorized = await POST(new Request('http://localhost/api/internal/maintenance', { method: 'POST', headers: { 'x-request-id': 'wave-f-401', 'x-environment-id': 'staging' } }));
   assert.equal(unauthorized.status, 401);
-  assert.equal(unauthorized.headers.get('x-request-id'), 'wave-f-401');
+  assert.match(unauthorized.headers.get('x-request-id'), UUID);
+  assert.notEqual(unauthorized.headers.get('x-request-id'), 'wave-f-401');
 
   const forbidden = await POST(new Request('http://localhost/api/internal/maintenance', { method: 'POST', headers: { 'x-request-id': 'wave-f-403', 'x-maintenance-secret': 'secret', 'x-environment-id': 'production' } }));
   assert.equal(forbidden.status, 403);
-  assert.equal(forbidden.headers.get('x-request-id'), 'wave-f-403');
+  assert.match(forbidden.headers.get('x-request-id'), UUID);
+  assert.notEqual(forbidden.headers.get('x-request-id'), 'wave-f-403');
 
   const invalid = await POST(new Request('http://localhost/api/internal/maintenance', {
     method: 'POST',
@@ -125,13 +148,15 @@ test('internal route fails closed and propagates request IDs on safe auth/status
     body: JSON.stringify({ limit: 0 }),
   }));
   assert.equal(invalid.status, 409);
-  assert.equal(invalid.headers.get('x-request-id'), 'wave-f-409');
+  assert.match(invalid.headers.get('x-request-id'), UUID);
+  assert.notEqual(invalid.headers.get('x-request-id'), 'wave-f-409');
 
   const success = await POST(new Request('http://localhost/api/internal/maintenance', {
     method: 'POST',
     headers: { 'x-request-id': 'wave-f-ok', 'x-maintenance-secret': 'secret', 'x-environment-id': 'staging' },
   }));
   assert.equal(success.status, 200);
-  assert.equal(success.headers.get('x-request-id'), 'wave-f-ok');
-  assert.equal((await success.json()).data.deleted, 1);
+  assert.match(success.headers.get('x-request-id'), UUID);
+  assert.notEqual(success.headers.get('x-request-id'), 'wave-f-ok');
+  assert.equal((await success.json()).requestId, success.headers.get('x-request-id'));
 });
