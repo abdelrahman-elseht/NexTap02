@@ -1,0 +1,79 @@
+{
+  "status":"draft",
+  "approval":null,
+  "decisions":{
+    "authority":"Actual user selections relayed by parent d7495b13-a37e-4ed3-ba55-a41dcab583bc; parent confirmed rounds1–12 at latest retained-owner handoff. Peer artifacts preserve question/answer evidence, not independent consent.",
+    "sources":{"vision":"docs/vision.md read in full","repository":"Vision/assets/.atomic/docs only; no app/package/migrations/deployment/inventory workbook/instruction/glossary/ADR found","skills":"Four required skills plus glossary and ADR formats directly read"},
+    "local":[
+      {"key":"architecture.stack","question":"Section 28 proposes, but does not commit to, Next.js with Supabase PostgreSQL, Auth and Storage. Should we adopt this stack?","answer":"Next.js + Supabase (Recommended)","status":"accepted","recommendation":"Next.js+Supabase","rejectedAlternatives":["Alternative framework/services","Defer"],"evidence":"Parent round2 actual answer","dependencies":["repository.inspection"]},
+      {"key":"architecture.hosting","question":"Which managed application-hosting direction should the launch architecture use?","answer":"Host on Cloudflare","status":"accepted","recommendation":"Vercel+Cloudflare DNS","rejectedAlternatives":["Vercel","Defer"],"evidence":"Parent round2 actual answer","dependencies":["repository.inspection"]},
+      {"key":"architecture.workers-adapter","question":"For Next.js application hosting on Cloudflare, should we select a runtime adapter now or target Workers and defer the adapter until compatibility checks?","answer":"Workers; defer adapter (Recommended)","status":"explicit-deferral-accepted","recommendation":"Workers, defer exact adapter until compatibility proof","rejectedAlternatives":["Select vinext beta now","Select OpenNext now"],"evidence":"Parent round5 actual selection confirmed by latest retained-owner relay; product/security artifacts","dependencies":["architecture.stack","architecture.hosting","investigation.cloudflare-hosting"]},
+      {"key":"architecture.environment","question":"What environment separation should the launch architecture require?","answer":"Staging + production (Recommended)","status":"accepted","recommendation":"Separate services","rejectedAlternatives":["Local plus production only","Defer"],"evidence":"Parent round5 actual selection confirmed at latest handoff; product/security artifacts","dependencies":["architecture.stack","architecture.hosting"]}
+    ],
+    "shared":[
+      {"key":"foundation.release-actors","answer":"Admin only (Recommended)","meaning":"No Owner login/dashboard; only Admin editing","evidence":"Parent round1"},
+      {"key":"foundation.doc-language","answer":"English docs (Recommended)","evidence":"Parent round1"},
+      {"key":"foundation.release-options.analytics","answer":"Defer analytics (Recommended)","meaning":"No product counters/events; operational errors/audit/history separate","evidence":"Parent round1"},
+      {"key":"foundation.release-options.slug","answer":"Include /b/{slug} (Recommended)","meaning":"Independent sharing route; permanent Card URL","evidence":"Parent round1"},
+      {"key":"foundation.card-lifecycle","question":"An Active card belongs to Alfa Cafe and needs to move to Beta. Which card-transfer lifecycle should the first release support?","answer":"1 , store the history from day one with simple ui ","meaning":"Deactivate first retains mapping; assign/reassign only Inactive; Activate separate; Unassign Inactive/unassigned; no deletion/token reuse; mandatory day-one Card history simple UI","evidence":"Parent round3 custom answer","rejectedAlternatives":["Active direct transfer","Defer transfer"]},
+      {"key":"foundation.business-publication","answer":"Explicit enable (Recommended)","meaning":"Create Disabled; initial explicit Enable; Save afterwards immediate; Disable gates Card/canonical/alias, preserves Card states; no hard-delete","evidence":"Parent round3"},
+      {"key":"foundation.ownership","answer":"No owner link (Recommended)","evidence":"Parent round3"},
+      {"key":"foundation.slug-history","answer":"Redirect and reserve (Recommended)","meaning":"Historical aliases permanently same Business, gated","evidence":"Parent round3"},
+      {"key":"foundation.content-cardinality.sections","answer":"One per type (Recommended)","evidence":"Parent round4"},
+      {"key":"foundation.content-hours","answer":"Weekly schedule (Recommended)","meaning":"Timezone,closed/multiple intervals,no holidays/open-now","evidence":"Parent round4"},
+      {"key":"foundation.contact-canonical-value","answer":"Unified contact fields (Recommended)","evidence":"Parent round4"},
+      {"key":"foundation.payment-actions","answer":"External links only (Recommended)","evidence":"Parent round4"},
+      {"key":"foundation.card-history-details","answer":"Successful changes (Recommended)","meaning":"Read-only Admin timeline, creation/import and actual successful assignment/state changes; actorUUID/time/old-new references/state; no scans/content snapshots","evidence":"Parent round8"},
+      {"key":"product.publication-readiness","answer":"Name + slug (Recommended)","evidence":"Parent round8"},
+      {"key":"foundation.content-cardinality.links","answer":"One section; repeats allowed (Recommended)","evidence":"Parent round8"},
+      {"key":"foundation.card-activation-eligibility","answer":"Independent activation (Recommended)","meaning":"Assigned Card activates while Business Disabled; no public content until Enabled","evidence":"Parent round9; security artifact and latest parent rounds1–12 confirmation"}
+    ],
+    "peerDependencies":[
+      {"key":"database.internal-identifiers","answer":"Internal UUIDs (Recommended)","evidence":"Parent round2"},
+      {"key":"database.import-policy","answer":"Atomic safe batch (Recommended)","meaning":"Preview,whole rejection on invalid/intra-batch duplicates,skip existing unchanged,new Inactive/unassigned,reject Active requests","evidence":"Parent round2"},
+      {"key":"database.migration-policy","answer":"Supabase SQL migrations (Recommended)","evidence":"Parent round5"},
+      {"key":"database.write-concurrency","answer":"Expected versions (Recommended)","meaning":"Stale no mutation; history atomic with lifecycle","evidence":"Parent round9"},
+      {"key":"api.public-route-contract","answer":"Render directly (Recommended)","evidence":"Parent round5"},
+      {"key":"api.admin-operation-contract","answer":"Admin HTTP/JSON (Recommended)","evidence":"Parent round6"},
+      {"key":"api.error-envelope","answer":"JSON envelope (Recommended)","evidence":"Parent round6"},
+      {"key":"api.import-format","answer":"CSV only (Recommended)","evidence":"Parent round6"},
+      {"key":"security.authn-admin","answer":"Mandatory TOTP MFA (Recommended)","evidence":"Parent round7"},
+      {"key":"security.public-token-entropy","answer":"128-bit randomness (Recommended)","meaning":"Future tokens; preserve legacy exactly","evidence":"Parent round7"},
+      {"key":"security.upload-validation","answer":"2 MiB / 16 MP (Recommended)","meaning":"JPEG/PNG/WebP decode/reencode metadata strip; no SVG/animation","evidence":"Parent round7"},
+      {"key":"security.audit-retention","answer":"90d / 14d / 24h (Recommended)","evidence":"Parent round7"},
+      {"key":"security.public-cache-revocation","answer":"Fresh gate; fail closed (Recommended)","meaning":"Every new request current eligibility; no stale gate; downloaded/inflight copies excluded","evidence":"Parent round9"},
+      {"key":"security.image-access","answer":"Gate image access (Recommended)","meaning":"Private storage; app fresh Enabled/current image check; no old direct serving after Disable/replace","evidence":"Parent round9"},
+      {"key":"security.card-history-retention","answer":"Card lifetime (Recommended)","evidence":"Parent round10"},
+      {"key":"security.session-policy","answer":"8h / 30m / fresh TOTP (Recommended)","meaning":"8habsolute/30midle, TOTP5min sensitive actions/current membership/verified bootstrap/recovery","evidence":"Parent round10"},
+      {"key":"security.tenant-isolation","answer":"Restricted projection + RLS (Recommended)","evidence":"Parent round10"},
+      {"key":"security.external-content-validation","answer":"Safe content + bounds (Recommended)","evidence":"Parent round10; exact limits owned SECURITY doc"},
+      {"key":"security.rate-limits","answer":"Tiered limits (Recommended)","evidence":"Parent round11; exact limits owned SECURITY doc"},
+      {"key":"security.audit-write-failure","answer":"Atomic audit; reject change (Recommended)","meaning":"Mutation+routine audit+required history one transaction; postcommit cache/image failure no pretend rollback","evidence":"Parent round12"},
+      {"key":"security.privacy-data-minimization","answer":"Minimize; provider review gate (Recommended)","meaning":"Redacted logs/no Visitor tracking/native log-backup account verification gate","evidence":"Parent round12"}
+    ],
+    "canonicalTerms":["Business","Card","Card ID","Assignment","Activation","Active/Inactive Card","Enabled/Disabled Business","Section","Link","Slug alias","Card history","NexTap Admin","Visitor"],
+    "evidenceArtifacts":["product.json","database.json","flows-and-api.json","security-and-edge-cases.json"],
+    "investigation":{"state":"read-authoritative-docs-not-runtime-tested","sources":["https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/","https://developers.cloudflare.com/workers/framework-guides/web-apps/opennext/","https://developers.cloudflare.com/pages/framework-guides/nextjs/","https://developers.cloudflare.com/workers/runtime-apis/cache/","https://developers.cloudflare.com/workers/runtime-apis/nodejs/","https://vinext.dev/compatibility"],"facts":"Cloudflare guides updated Aug2026: Workers full-stack, vinext beta default recommendation, OpenNext documented maintenance; Pages static export only. CacheAPI local delete not global, put no success proof. vinext compatibility dashboard unavailable.","limit":"No app/project/account/configuration/provisioning/runtime tests"}
+  },
+  "unresolved":{
+    "designTree":[
+      {"key":"architecture.stack","state":"accepted","prerequisites":["repository.inspection"]},
+      {"key":"architecture.hosting","state":"accepted","prerequisites":["repository.inspection"]},
+      {"key":"architecture.workers-adapter","state":"explicitly-deferred-implementation-gate","prerequisites":["architecture.stack","architecture.hosting","investigation.cloudflare-hosting"]},
+      {"key":"architecture.environment","state":"accepted","prerequisites":["architecture.stack","architecture.hosting"]},
+      {"key":"architecture.resolver-cache","state":"eligibility-policy-settled-by-security; content mechanism architecture.content-cache","prerequisites":["foundation.card-lifecycle","foundation.business-publication","security.public-cache-revocation"]},
+      {"key":"architecture.content-cache","state":"sent-to-parent-awaiting-user","prerequisites":["foundation.business-publication","database.write-concurrency","security.public-cache-revocation","architecture.hosting"],"recommendation":"Content+monotonic revision atomic; fresh gate reads revision then version-keyed public representation; miss loads coherent current data; failed cache write does not fail read; no purge-dependent correctness","alternatives":["Fully dynamic content initially","Defer mechanism"],"children":["database.publication-revision","api.mutation-publication","architecture.operations"]},
+      {"key":"architecture.operational-targets","state":"sent-to-parent-awaiting-user","prerequisites":["architecture.environment","security.privacy-data-minimization"],"recommendation":"Explicitly defer numbers to mandatory prelaunch account review","alternatives":["Set budget/region/latency/availability/RPO/RTO now"]}
+    ],
+    "parentBatch":{"state":"sent","newHandoff":true,"questions":[{"key":"architecture.operational-targets","question":"ما الأهداف التشغيلية التي نوثقها للإطلاق بعد فصل staging والإنتاج؟","recommendation":"تأجيل الأرقام قبل الإطلاق","options":[{"label":"تأجيل الأرقام قبل الإطلاق (Recommended)","description":"لا نخترع budget/SLA/latency/RPO/RTO أو region؛ تبقى قائمة تحقق إلزامية قبل الإطلاق ضمن provider-verification gate."},{"label":"تحديد الأهداف الآن","description":"المستخدم يحدد سقف التكلفة الشهري والمنطقة وحدود فقد البيانات ووقت الاستعادة والتوافر/الزمن المقبول؛ نتحقق من قدرة الخطط لاحقًا."}],"answer":null},{"key":"architecture.content-cache","question":"مع فحص أهلية حديث fail-closed لكل طلب، كيف نضمن أن تعديل محتوى النشاط لا يعرض نسخة قديمة؟","recommendation":"Revision cache بعد فحص حديث","options":[{"label":"Revision cache بعد فحص حديث (Recommended)","description":"حفظ المحتوى وزيادة revision ذرّيًا؛ الطلب الحديث يقرأ الأهلية وrevision ثم يستخدم تمثيلًا عامًا مفتاحه business+revision؛ cache miss يعيد التحميل، وفشل cache write لا يفشل القراءة؛ لا اعتماد على نجاح purge عالمي لنشر النسخة الجديدة."},{"label":"قراءة ديناميكية أولًا","description":"قراءة المحتوى الحالي لكل طلب في v1 وتأجيل كاش محتوى الأعمال؛ أبسط نشرًا لكن حمل القراءة أكبر ويعدل ترشيح الرؤية."},{"label":"تأجيل آلية الكاش","description":"تبقى freshness/publication/recovery شرطًا قبل التنفيذ؛ لا وعد بتأخير أو purge غير مختبر."}],"answer":null}]},
+    "gates":["Exact Workers adapter compatibility","Runtime auth/session and current membership enforcement","Restricted projection/grants/RLS","Private gated image transformations/delivery","Cache and HTTP response ordering","Actual provider plan/region/cost/quotas","Provider native logs/backups/deletion/reconciliation/restore"],
+    "peerPrerequisites":{"database":"Revision/coherent projection contract if cache approved, token grammar/inventory sample, storage cleanup","flows-and-api":"Mutation-publication/retries/idempotency/error statuses and storage workflows; artifact read was stale through early API batch","product":"Canonical alignment and acceptance approval; artifact lagged activation answer but security/parent confirm","security-and-edge-cases":"Candidate artifact covers rounds1–12, implementation and native provider gates explicit"}
+  },
+  "consistency":{"rounds":0,"state":"not-started; awaiting final two local answers before candidate-ready","missing":[],"conflicts":[],"earlyReads":"All artifacts read for actual-evidence update, not bounded consistency exchange"},
+  "amendments":[
+    {"key":"interview.parent-chat-only","text":"All user questions and scoped approvals in parent chat; actual parent relay valid; peers/silence not consent","state":"active"},
+    {"key":"scope.card-history-day-one","question":"An Active card belongs to Alfa Cafe and needs to move to Beta. Which card-transfer lifecycle should the first release support?","answer":"1 , store the history from day one with simple ui ","meaning":"Mandatory day-one operational history with simple UI, separate from deferred analytics","evidence":"Parent round3","state":"applied"},
+    {"key":"retained-owner-rounds1-12","text":"Parent reopened retained owner, confirmed all actual rounds1–12, requested immediate NEW frontier; two questions sent, no final acceptance or implementation permission","state":"applied"},
+    {"key":"intercom.reply-context","text":"Latest reply attempt failed with no reply context; new handoff answer delivered successfully using send","state":"recorded"}
+  ]
+}

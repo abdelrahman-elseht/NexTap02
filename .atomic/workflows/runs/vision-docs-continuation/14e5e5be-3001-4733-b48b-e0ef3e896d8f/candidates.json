@@ -1,0 +1,1647 @@
+[
+  {
+    "owner": "product",
+    "document": "docs/PRODUCT_SPEC.md",
+    "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/product.json",
+    "candidate": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/candidates/product.md",
+    "candidateSha256": "ca6efb3eeff4f2f93fe7796ba6a6d088ed3ad4474c9583b9b08f66a46b7e4c03",
+    "sha256": "149f4c58a4258ba4e73f1c6909623cccb6eb8effea84fd0ed4ec19d8d08b8f30",
+    "draftSha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55",
+    "approvalSummary": "Admin alone manages launch; owner accounts and analytics are deferred. Permanent Card URLs render eligible Business pages directly, alongside independent slugs and reserved aliases. Transfer requires deactivation; activation may precede Business enablement. Minimal successful Card history lasts for the Card lifetime. Name and unique slug suffice for explicit Business enablement. Accepted cardinalities, contacts, hours and external-only payments remain binding. Next.js/Supabase on Workers uses separate environments, expected versions, atomic audit/history, fresh fail-closed gates and revision-keyed caching. Operator steps and authoritative-read dependence buy controlled publication and revocation. Adapter/runtime compatibility, numerical operating targets and provider-native log/backup/restore review remain mandatory gates. Token/sample, schema, normalization, storage and detailed API/retry contracts remain unfinished. All four peer checks are incomplete; Architecture changed hash after the bounded content read. Root must record final checks before freezing approval hashes. Approval must name only the exact replacement of 'Status: Draft. Documentation only; no implementation is authorized.' with 'Status: Approved. Documentation only; no implementation is authorized.' No material postapproval rewrite or implementation is authorized.",
+    "unresolved": [
+      {
+        "key": "architecture.workers-adapter",
+        "kind": "deferred-gate",
+        "detail": "Q17 defers vinext/OpenNext until actual project compatibility. Verify framework/runtime, auth/session enforcement, private image decoding/delivery and cache ordering before implementation. No runtime tests performed."
+      },
+      {
+        "key": "architecture.operational-targets",
+        "kind": "deferred-gate",
+        "detail": "Q46 defers budget, SLA, latency, region, recovery time and acceptable data loss to mandatory prelaunch decisions verified against provider plans. No numerical targets selected."
+      },
+      {
+        "key": "security.privacy-data-minimization.provider-review",
+        "kind": "deferred-gate",
+        "detail": "Q41 requires prelaunch account review of provider-native logs/backups, contents/retention, operator access, deletion and restore reconciliation. Application expiry does not establish provider deletion."
+      },
+      {
+        "key": "database.public-token-policy",
+        "kind": "implementation-detail",
+        "detail": "Define new-token encoding/grammar without reducing at least 128 cryptographically random bits; preserve printed legacy identifiers exactly. Public tokens grant no permissions."
+      },
+      {
+        "key": "database.legacy-token-sample",
+        "kind": "deferred-gate",
+        "detail": "UNRESOLVED prelaunch legacy verification gate; source classification fact. Rationale: the exact report states missing external sample evidence is not a documentation-candidate blocker; inspect actual printed tokens and verify grammar/URL compatibility before legacy import, manufacture or implementation, and before public use. Preserve existing printed IDs exactly; no sample, entropy or compatibility result is inferred. Provenance: .atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/round-0/product.json SHA-256 1adf24b03ed4eeb3fe74e1d9da7c7a246740583da397447a5393c9819595c0c3; .atomic/recovery/accepted-decisions.json decisions api.import-format/security.public-token-entropy; docs/PRODUCT_SPEC.md SHA-256 0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55. Original detail: No actual legacy inventory workbook/sample was present in the inspected inventory. Printed-token grammar/entropy remains unverified; absence does not block an honest documentation candidate."
+      },
+      {
+        "key": "database.content-shape",
+        "kind": "implementation-detail",
+        "detail": "Physical schema, slug normalization/registry, Section settings/icon schemas, contact normalization, weekly-hours overnight/overlap rules, image metadata and activation timestamp semantics remain unfinished. Settled cardinalities/policies remain binding."
+      },
+      {
+        "key": "database.publication-revision",
+        "kind": "implementation-detail",
+        "detail": "Define version/revision relationships, coherent restricted projections and transactional revision/audit/history details. Q31/Q40/Q47 settle expected-version rejection, atomic required records and content/revision policy."
+      },
+      {
+        "key": "api.contract-details",
+        "kind": "implementation-detail",
+        "detail": "Complete payload/error schemas, public lifecycle and alias status/disclosure/cache behavior, pagination bounds, no-op results, CSV parsing/preview integrity, image completion/cleanup and truthful committed mutation responses. Methods, envelope, Admin status classes and cursor policy are settled."
+      },
+      {
+        "key": "api.idempotency-key-retention",
+        "kind": "implementation-detail",
+        "detail": "Q43 selects keys plus versions, same-payload replay and different-payload rejection but explicitly leaves duration unfinished. Define key retention and durable replay/expiry without reasking settled policy."
+      },
+      {
+        "key": "security.content-schema-details",
+        "kind": "implementation-detail",
+        "detail": "Combined JSON byte ceiling, Unicode counting, exact contact normalization and registered settings fields remain unfinished within accepted content/link/image/CSV bounds."
+      },
+      {
+        "key": "architecture.storage-and-restore",
+        "kind": "implementation-detail",
+        "detail": "Define object-reference cleanup, backup/restore coverage and reconciliation before public reopening. PostgreSQL and object storage have no shared transaction. Verify selected recovery targets before launch; post-commit delivery failure does not imply rollback."
+      },
+      {
+        "key": "peer.product.architecture",
+        "kind": "peer-check",
+        "detail": "Read stale content at 424aacc36e1704547043e6fba004cd1eae03a6580c5b7a9959962a4458915fd8 with matching before/after hashes. Scope/lifecycle/cardinality/security align but Q46/Q47 still called pending. Later hash-only observation was 1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70; revised content not read. Final check incomplete."
+      },
+      {
+        "key": "peer.product.database",
+        "kind": "peer-check",
+        "detail": "Checked 904ecbb0c3633b1dcb8ef97ba55b5ada0384f92d52e51aae94923bacc3ed32b5 before/after and later unchanged. Relationships align; stale history/cardinality/concurrency/retention/activation/revision wording conflicts with ledger. Candidate not reread; acknowledgment is not consent."
+      },
+      {
+        "key": "peer.product.flows-and-api",
+        "kind": "peer-check",
+        "detail": "Checked 23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44 before/after and later unchanged. Journeys/security/cardinality align; Q42 to Q45 and revision/mutation text lag ledger. Note queued for discovered pending stage; candidate not read."
+      },
+      {
+        "key": "peer.product.security-and-edge-cases",
+        "kind": "peer-check",
+        "detail": "Checked 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf before/after and later unchanged. Exposure/history align; ordinary freshness and retry-policy wording lag Q43/Q47. Note queued for discovered pending stage; candidate not read."
+      }
+    ],
+    "peerChecks": [
+      {
+        "document": "docs/ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70",
+        "outcome": "incomplete",
+        "detail": "Latest hash-only observation. Full read was at 424aacc36e1704547043e6fba004cd1eae03a6580c5b7a9959962a4458915fd8, unchanged before/after. Scope/vocabulary/cardinality/lifecycle/API/persistence/security align there, but Q46/Q47 pending text conflicts with ledger. Latest content not read. One consolidated note sent; acknowledgment verifies neither revised candidate.",
+        "current": true
+      },
+      {
+        "document": "docs/DATABASE.md",
+        "sha256": "904ecbb0c3633b1dcb8ef97ba55b5ada0384f92d52e51aae94923bacc3ed32b5",
+        "outcome": "incomplete",
+        "detail": "Full bounded read, matching before/after hashes and later unchanged. Relationships/shared scope align; settled history/cardinality/concurrency/retention/activation/revision still called open. Physical schema/token/timestamp contracts remain genuine. One consolidated note sent; revised candidate not read; acknowledgment is not approval.",
+        "current": false
+      },
+      {
+        "document": "docs/FLOWS_AND_API.md",
+        "sha256": "23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44",
+        "outcome": "incomplete",
+        "detail": "Full bounded read, matching before/after hashes and later unchanged. Journeys/cardinality/lifecycle/security align; Q42 to Q45 pending claims and revision/delivery text lag ledger. Payload/status/replay details remain unfinished. One consolidated note queued to discovered pending stage; revised candidate not read; no consent inferred.",
+        "current": false
+      },
+      {
+        "document": "docs/SECURITY_AND_EDGE_CASES.md",
+        "sha256": "456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf",
+        "outcome": "incomplete",
+        "detail": "Full bounded read, matching before/after hashes and later unchanged. Scope/lifecycle/exposure/image/history/retention align. Ordinary-content freshness and retry-policy wording lag Q43/Q47; provider/runtime/schema gates remain genuine. One consolidated note queued to discovered pending stage; revised candidate not read; no consent inferred.",
+        "current": false
+      }
+    ],
+    "verification": {
+      "unslopApplied": true,
+      "sourceReview": "Read full vision, verified47 ledger, unanswered inventory, own original report, root source manifest and empty actual-answer file. Read all five original reports and five document snapshots. No continuation reports were available in bounded inventory. Verified Q9 exact trailing-space answer and separately attributed exact parent interpretation at line 143; no peer consent substituted for answers. Directly read all four required skills and glossary/ADR formats; terms/decisions stay inline. Reconciled stale Product choices and related conflicts, preserving genuine gates and unfinished contracts. Product candidate SHA256 is 0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55. Full initial readback and final scoped readback/search verified policies, exact Q9 evidence, sole normalized status, open-gate/check sections and later observed Architecture hash. Report manually checked against required fields, enum values, unique decision keys, four peer checks and null approval; JSON readback performed. No implementation, Git, credentials, publication, delegation, workflow or question tools used. Parent not visible in discovered Intercom targets; report is durable root handoff.",
+      "crosslinkReview": "Searched inline Markdown links in all five checked docs and Product readback. Resolved vision.md, four companions and four added ledger/inventory/root evidence links through ../.atomic; every local target was read and exists. No local Markdown link had a fragment, so no anchor target required validation. Checked numbered vision references against full source. ATX headings and simple inline links used. Peer hashes checked before/after bounded content reading; later Architecture hash change explicitly recorded without content reread. All four peer outcomes remain incomplete. Review verifies source/crosslink consistency only, not runtime or implementation. Root must append final plain peer-check record before freezing approval hashes; approval may change only the exact named Draft-to-Approved status line."
+    },
+    "sources": [
+      {
+        "path": "docs/vision.md",
+        "section": "Read in full, sections 1 to 46; permanent identifiers, relationships, actors, page capabilities, imports, caching, payments/reviews and launch exclusions checked.",
+        "status": "local-content-hashed",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "path": ".atomic/recovery/accepted-decisions.json",
+        "section": "Read in full; all 47 actual decisions, source/result references, Q9 trailing space and separately attributed parent interpretation, explicit deferrals and null document approvals.",
+        "status": "local-content-hashed",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "path": ".atomic/recovery/unanswered-batches.json",
+        "section": "Read in full; zero complete unanswered batches; Product stale activation key answered by Q32.",
+        "status": "local-content-hashed",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "section": "Read in full; answers empty, no new policy or approval inferred.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "section": "Read in full; retained path/hash inventory used as provenance, not proof of new answers or implementation.",
+        "status": "local-content-hashed",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json",
+        "section": "Read in full; accepted Product scope and decision history retained; stale pending claims superseded by ledger.",
+        "status": "local-content-hashed",
+        "sha256": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "section": "Read in full; adapter/runtime/provider gates retained; stale Q46/Q47 null answers overridden by actual ledger decisions.",
+        "status": "local-content-hashed",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "section": "Read in full; physical schema/token/timestamp details kept unfinished while settled policies follow ledger.",
+        "status": "local-content-hashed",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "section": "Read in full from corrected actual path; stale API entries reconciled against Q20 to Q23 and Q42 to Q45.",
+        "status": "local-content-hashed",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "section": "Read in full; accepted security/history/retention rules and genuine unfinished bounds distinguished from old incomplete peer checks.",
+        "status": "local-content-hashed",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "section": "Full bounded content read at 424aacc36e1704547043e6fba004cd1eae03a6580c5b7a9959962a4458915fd8; newer hash observed without content reread.",
+        "status": "local-content-hashed",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "path": "docs/DATABASE.md",
+        "section": "Full bounded content read at 904ecbb0c3633b1dcb8ef97ba55b5ada0384f92d52e51aae94923bacc3ed32b5.",
+        "status": "local-content-hashed",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "path": "docs/FLOWS_AND_API.md",
+        "section": "Full bounded content read at 23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44.",
+        "status": "local-content-hashed",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "path": "docs/SECURITY_AND_EDGE_CASES.md",
+        "section": "Full bounded content read at 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf.",
+        "status": "local-content-hashed",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "path": ".atomic/vision-docs-setup.md",
+        "section": "Read in full; documentation ownership and historical setup evidence only.",
+        "status": "local-content-hashed",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      }
+    ],
+    "links": [
+      {
+        "target": "vision.md",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "target": "../.atomic/recovery/accepted-decisions.json",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "target": "../.atomic/recovery/unanswered-batches.json",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      }
+    ]
+  },
+  {
+    "owner": "architecture",
+    "document": "docs/ARCHITECTURE.md",
+    "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/architecture.json",
+    "candidate": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/candidates/architecture.md",
+    "candidateSha256": "659f17e0db43d64bfb77f597b850a8171708891bb81c82bddfa507f569d17630",
+    "sha256": "5c0d4e2cca17e7511dc913a25435c35a3f362495c3ce296bd3bb9c3b48cab2fd",
+    "draftSha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70",
+    "approvalSummary": "Admin-only shared Next.js application on Cloudflare Workers with Supabase PostgreSQL/Auth/private Storage, separate staging and production, permanent direct-render Card routes and reserved Business slug aliases. Deactivate before transfer; independent Card activation does not enable a Disabled Business. Successful Card history is mandatory from day one and retained for Card lifetime, separately from analytics and expiring audit. Q42-Q45 settle explicit commands, idempotency keys plus expected versions, standard Admin statuses and cursor pagination. Q47 accepts atomic content-plus-revision and fresh eligibility/revision before Business/revision cache reuse, without purge-dependent publication. Strict gates trade authoritative-read cost and outage tolerance for current eligibility. Q46 defers numeric operating targets to mandatory prelaunch verification. Adapter compatibility, enforcement, provider-native retention/restore and detailed physical/API/image/cache contracts remain open gates. All four checked peer snapshots contain stale answer wording; repairs/current candidate checks remain incomplete. Draft only, no implementation or document approval. Root must append its peer-check record before freezing hashes and name the exact Draft-to-Approved status-only change.",
+    "unresolved": [
+      {
+        "key": "architecture.workers-adapter",
+        "kind": "deferred-gate",
+        "detail": "Accepted pre-implementation deferral: select vinext/OpenNext only after actual project checks with pinned framework/dependencies and Workers compatibility date. Dashboard data was unavailable; no compatibility result inferred."
+      },
+      {
+        "key": "architecture.operational-targets",
+        "kind": "deferred-gate",
+        "detail": "Q46 accepts mandatory prelaunch numerical budget/SLA/latency/region/recovery-time/acceptable-data-loss decisions against actual provider plans. Capacity, quotas, costs and backup features remain unverified; no numbers invented."
+      },
+      {
+        "key": "security.privacy-data-minimization.provider-review",
+        "kind": "deferred-gate",
+        "detail": "Accepted prelaunch account review of native log/backup contents, retention, permissions, deletion/reconciliation and restore coverage for relational data and private images. Application expiry does not establish provider deletion; old restored access must be reconciled before public reopening."
+      },
+      {
+        "key": "architecture.runtime-enforcement",
+        "kind": "implementation-detail",
+        "detail": "Verify actual absolute/idle sessions, fresh TOTP/current membership, CSRF, identity-scoped management, grants/RLS, restricted projection, same-Business constraints and trusted-proxy/rate controls on the selected provider/runtime."
+      },
+      {
+        "key": "architecture.public-cache-ordering",
+        "kind": "implementation-detail",
+        "detail": "Define/test framework/adapter/HTTP/CDN ordering so fresh eligibility/revision and current-image checks precede every new delivery, including aliases, conditional responses, misses/failures and racing saves. No response cache may bypass gates."
+      },
+      {
+        "key": "architecture.image-storage-workflow",
+        "kind": "implementation-detail",
+        "detail": "Finish private image transformation/delivery, replacement/removal, reference commits and cleanup execution/retries. PostgreSQL/Storage are non-atomic. Unused temporary objects expire in 24 hours; post-commit cleanup failure cannot erase current references/objects or reopen old URLs."
+      },
+      {
+        "key": "database.publication-revision",
+        "kind": "implementation-detail",
+        "detail": "Q47 settles atomic content-plus-revision. Physical fields, revision-advancing mutations, coherent restricted projection/loading and any mapping to expectedVersion remain unfinished; edit version and content revision are not assumed equal."
+      },
+      {
+        "key": "api.mutation-publication",
+        "kind": "implementation-detail",
+        "detail": "Finish committed-result/revision response schemas and timeout reconciliation. Preserve immediate publication via the current revision, no purge-dependent delay/new publish step, and no rollback claim after commit."
+      },
+      {
+        "key": "api.retry-record-contract",
+        "kind": "implementation-detail",
+        "detail": "Q43 settles Idempotency-Key plus expectedVersion and same-payload original-result replay. Key scope/retention, atomic retry records, replay authorization and post-expiry behavior remain unfinished."
+      },
+      {
+        "key": "api.representation-contract",
+        "kind": "implementation-detail",
+        "detail": "Finish public lifecycle/alias statuses/notices, slug grammar/normalization, pagination bounds, payload/field-error schemas, CSV parsing/preview binding and upload completion. Preserve safe Inactive notice and accepted Admin status map."
+      },
+      {
+        "key": "database.physical-schema",
+        "kind": "implementation-detail",
+        "detail": "Finish schemas/constraints, token encoding/grammar, activation timestamp meaning, ordered-content/settings and current-image reference representation. UUIDs, immutable legacy tokens, Section/Link cardinality and weekly-hours policy are settled."
+      },
+      {
+        "key": "security.content-schema-details",
+        "kind": "implementation-detail",
+        "detail": "Combined JSON request-byte ceiling, exact character counting, contact normalization and complete registered Section/icon settings schemas remain unfinished within accepted limits."
+      },
+      {
+        "key": "database.legacy-inventory",
+        "kind": "deferred-gate",
+        "detail": "UNRESOLVED prelaunch legacy verification gate; source classification fact. Rationale: the exact report states missing external sample evidence is not a documentation-candidate blocker; inspect actual printed tokens and verify grammar/URL compatibility before legacy import, manufacture or implementation, and before public use. Preserve existing printed IDs exactly; no sample, entropy or compatibility result is inferred. Provenance: .atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/round-0/architecture.json SHA-256 e499c25656864f989602e0b1c6edc9361e52a195654af4e4e06e3f3c8bb91391; .atomic/recovery/accepted-decisions.json decisions api.import-format/security.public-token-entropy; docs/ARCHITECTURE.md SHA-256 1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70. Original detail: Missing actual printed-token inventory/sample prevents compatibility verification. Preserve legacy tokens exactly; do not regenerate or normalize them to match new entropy/encoding rules. This is a factual implementation dependency, not a new architecture policy question or blocker to a truthful Draft candidate."
+      },
+      {
+        "key": "peer.product",
+        "kind": "peer-check",
+        "detail": "Checked PRODUCT_SPEC.md hash 79656d86d686b014436461928c6122a5bbe7b0844a0d2d74e5730f61bbd8eb7a was identical before/after full cross-read. Stale independent-activation/Card-history-retention wording requires ledger reconciliation; one consolidated note sent and product note received, but no repaired candidate hash checked."
+      },
+      {
+        "key": "peer.database",
+        "kind": "peer-check",
+        "detail": "Checked DATABASE.md hash 904ecbb0c3633b1dcb8ef97ba55b5ada0384f92d52e51aae94923bacc3ed32b5 was identical before/after full cross-read. Stale history/concurrency/activation/Link/security/revision policy entries need reconciliation; one consolidated note sent and cache distinction note received, but no repaired candidate hash checked."
+      },
+      {
+        "key": "peer.flows-and-api",
+        "kind": "peer-check",
+        "detail": "Checked FLOWS_AND_API.md hash 23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44 was identical before/after full cross-read. Stale Q42-Q45 pending claims and speculative delivery.state need reconciliation with Q47. One consolidated note queued to discovered pending stage; no reply or repaired candidate hash checked."
+      },
+      {
+        "key": "peer.security-and-edge-cases",
+        "kind": "peer-check",
+        "detail": "Checked SECURITY_AND_EDGE_CASES.md hash 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf was identical before/after full cross-read. Stale owner-answer wording needs Q42-Q47 reconciliation while preserving enforcement/provider/normalization gates. One consolidated note queued to discovered pending stage; no reply or repaired candidate hash checked."
+      }
+    ],
+    "peerChecks": [
+      {
+        "document": "docs/PRODUCT_SPEC.md",
+        "sha256": "79656d86d686b014436461928c6122a5bbe7b0844a0d2d74e5730f61bbd8eb7a",
+        "outcome": "incomplete",
+        "detail": "Full before/after-stable snapshot checked for scope, vocabulary, cardinality, lifecycle, API/persistence/security/cache dependencies. Admin-only, one Business/Card mapping, aliases, Sections/Links/hours/contact/payments align. Lines 53/83/167/177-180 retain stale activation/history/operating policy claims now settled by ledger Q32/Q35/Q46/Q47. One consolidated evidence note sent; received product acknowledgment is not policy/document consent. Repair/current candidate hash not checked.",
+        "current": false
+      },
+      {
+        "document": "docs/DATABASE.md",
+        "sha256": "904ecbb0c3633b1dcb8ef97ba55b5ada0384f92d52e51aae94923bacc3ed32b5",
+        "outcome": "incomplete",
+        "detail": "Full before/after-stable snapshot checked across requested contracts. Cardinality, internal UUID/public token distinction, tenant children and atomic safe import align. Lines 95/101-107/119-125/137-139/157-163 mark accepted history, concurrency, independent activation, Link membership, security bounds and revision cache pending. Ledger settles policy, not physical fields/timestamps. Consolidated note sent; received database note correctly distinguishes expectedVersion from content revision and non-atomic DB/Storage. Repair/current candidate hash not checked.",
+        "current": false
+      },
+      {
+        "document": "docs/FLOWS_AND_API.md",
+        "sha256": "23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44",
+        "outcome": "incomplete",
+        "detail": "Full before/after-stable snapshot checked across requested contracts. Direct Card HTML, public/alias/image gates, lifecycle, expected versions and atomic audit/history align. Lines 145/200/236/277/281-290 still call Q42-Q45 pending; speculative delivery.state requires Q47 reconciliation, not a purge-delay assumption. Key retention/public statuses/payload/import/image details remain genuine implementation contracts. One consolidated note queued to discovered pending owner stage; no reply/current repaired candidate checked, and transport is not consent.",
+        "current": false
+      },
+      {
+        "document": "docs/SECURITY_AND_EDGE_CASES.md",
+        "sha256": "456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf",
+        "outcome": "incomplete",
+        "detail": "Full before/after-stable snapshot checked across requested contracts. Fresh fail-closed eligibility, private current-reference images, mandatory MFA/sessions/RLS, minimized retention and atomic audit/history align. Lines 185-186 describe owner answers as unsettled where Q42-Q47 apply. Enforcement/provider-native log-backup/restore/normalization gates stay open. One consolidated note queued to discovered pending owner stage; no reply/current repaired candidate checked, and transport is not consent.",
+        "current": false
+      }
+    ],
+    "verification": {
+      "unslopApplied": true,
+      "sourceReview": "Read vision and authoritative 47-answer ledger completely, plus unanswered inventory, original own/four peer reports, root sources/new-answers and all five drafts. No continuation reports were available in the inspected directory. Reconciled only stale answers/direct conflicts; Q9 answer string retains its trailing space and parent interpretation remains separately attributed. Directly re-read all six cited Cloudflare/vinext URLs; guide dates/support/cache/Node limitations match the claims, while compatibility dashboard data is unavailable. Repository path search confirms the six docs and two asset paths and no package.json/migration/instruction/glossary matches in the searched project patterns; ancestor absence is explicitly historical evidence, not newly verified. Owned candidate was read back after write, SHA256 1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70. Sole actual status line is exact Draft text. Four peer hashes were stable before/after the bounded full reads; later repairs are not certified. No parent target was visible in Intercom discovery, so report/document are the durable root handoff. No implementation/runtime tests, Git, credentials, publication, delegation, workflows or user-question tools were used. Root must append plain peer-check record before approval hash freezing and precompute the exact status-only Draft-to-Approved change; no approval claimed.",
+      "crosslinkReview": "Searched inline Markdown links across the five checked draft snapshots and the written owned candidate. All 11 unique local candidate targets were read and exist: vision.md, four peer docs, ../.atomic/vision-docs-setup.md, accepted-decisions.json, unanswered-batches.json, original architecture.json, continuation sources.json and new-answers.json. Relative links resolve from docs/; no local fragment/anchor links occur, so no missing local anchor exists to resolve. Peer snapshot local links likewise point to the existing five documents/vision without fragment anchors. Candidate headings are ATX and links are simple inline Markdown. Six external candidate URLs were directly read; compatibility URL returns an unavailable-data page rather than missing-link proof. This is source/crosslink review, not Markdown-renderer or implementation verification; later peer edits are outside the checked snapshots."
+    },
+    "sources": [
+      {
+        "path": "docs/vision.md",
+        "section": "Read in full, sections 1-46; architecture references checked against scope, permanent Card URLs, multi-tenancy, rendering, storage, cache, security, stack and growth sections.",
+        "status": "local-content-hashed",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "path": ".atomic/recovery/accepted-decisions.json",
+        "section": "Read in full; 47 actual successful parent-chat answers, source mappings, empty document approvals, exact Q9 answer with trailing space and separately attributed parent interpretation at transcript line 143; Q42-Q47 reconciliation.",
+        "status": "local-content-hashed",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "path": ".atomic/recovery/unanswered-batches.json",
+        "section": "Read in full; zero complete unanswered batches; architecture Q46/Q47 stale pending entries; genuine adapter/operating gates and unfinished peer detail topics.",
+        "status": "local-content-hashed",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "section": "Actual-answer authority and empty answers array read; no new approval or decision inferred.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "section": "Original run/source paths and supplied hashes read; historical inventory, not new approval evidence.",
+        "status": "local-content-hashed",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "section": "Read in full; old local/shared/dependency answers, provider investigation, stale Q46/Q47 frontier, accepted gates and original consistency state.",
+        "status": "local-content-hashed",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json",
+        "section": "Read in full; original scope/lifecycle/cardinality evidence and stale activation/history wording, superseded by ledger where applicable.",
+        "status": "local-content-hashed",
+        "sha256": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "section": "Read in full; UUID/import/migration evidence, physical-schema proposals and stale concurrency/history/revision dependencies.",
+        "status": "local-content-hashed",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "section": "Read in full; original early API proposal/answer lag and unfinished mutation/publication/retry contract topics.",
+        "status": "local-content-hashed",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "section": "Read in full; original security answers and implementation/provider gates; historical peer exchange is not current consistency or consent.",
+        "status": "local-content-hashed",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "section": "Original draft and written candidate read in full; stale cache/operating questions reconciled while retaining unrelated requirements and trade-offs.",
+        "status": "local-content-hashed",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "path": "docs/PRODUCT_SPEC.md",
+        "section": "Full checked snapshot; scope, canonical vocabulary, lifecycle/publication, content cardinality, companion constraints and stale open entries.",
+        "status": "local-content-hashed",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "path": "docs/DATABASE.md",
+        "section": "Full checked snapshot; entities, cardinality, lifecycle, tenant constraints, imports/migrations, history, transaction/revision/storage proposals and stale pending policies.",
+        "status": "local-content-hashed",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "path": "docs/FLOWS_AND_API.md",
+        "section": "Full checked snapshot; private/public routes, lifecycle, auth, expected versions, errors, imports/images, retry/publication proposals and stale Q42-Q45 frontier.",
+        "status": "local-content-hashed",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "path": "docs/SECURITY_AND_EDGE_CASES.md",
+        "section": "Full checked snapshot; fresh page/image gates, MFA/session/RLS, retention/privacy, atomic audit/history, validation and genuine enforcement/provider gates.",
+        "status": "local-content-hashed",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "path": ".atomic/vision-docs-setup.md",
+        "section": "Read in full; original ownership/preferences and documentation-only scope; historical setup status not treated as current workflow or approval state.",
+        "status": "local-content-hashed",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "path": "https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/",
+        "section": "Direct source read, including full 361-line output; 2026-08-25 guide recommends beta vinext, lists support and requires project checks; provider instructions not executed.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://developers.cloudflare.com/workers/framework-guides/web-apps/opennext/",
+        "section": "Direct source read; 2026-08-25 documented maintenance path, next build adaptation and unsupported Node.js middleware.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://developers.cloudflare.com/pages/framework-guides/nextjs/",
+        "section": "Direct source read; 2026-08-25 static-export Pages path versus full-stack Workers recommendation.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://developers.cloudflare.com/workers/runtime-apis/cache/",
+        "section": "Direct source read; 2026-08-14 Background, Put and Delete establish independent cache mechanisms, no guaranteed put storage and data-center-only delete.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/",
+        "section": "Direct source read; 2026-08-12 subset, shims and nonfunctional imports; no runtime compatibility inferred.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://vinext.dev/compatibility",
+        "section": "Direct source read returned Compatibility data unavailable; placeholder zero percentages are not a project compatibility result.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/grill-with-docs/SKILL.md",
+        "section": "Read directly; task-specific no-Skill/no-interview restart restrictions govern.",
+        "status": "local-content-hashed",
+        "sha256": "abc0fa7948db18b5fb0e1cc1c522ac5ff47d874e2da1e5df60619d79be11f38b"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/grilling/SKILL.md",
+        "section": "Read directly; facts versus human choices and prerequisite-aware frontier, without local questions or waiting.",
+        "status": "local-content-hashed",
+        "sha256": "d806733216b16e51adad834e724bfec5540a436d06395bfc75b843cda9f7404b"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/domain-modeling/SKILL.md",
+        "section": "Read directly with GLOSSARY-FORMAT.md and ADR-FORMAT.md; vocabulary and qualifying trade-offs remain inline only.",
+        "status": "local-content-hashed",
+        "sha256": "b62d997256cc073e123d4303da8e9db00db0e28de9739660ca3e55ab76e09cdb"
+      },
+      {
+        "path": "C:/Users/elseh/AppData/Local/atomic-herdr/node_modules/@bastani/atomic/dist/builtin/workflows/skills/unslop/SKILL.md",
+        "section": "Read completely and applied to candidate/report prose without altering exact answer evidence.",
+        "status": "local-content-hashed",
+        "sha256": "6cd1f15238fa2348f30e669f019d815eecf7345392ca7948a56ad27b59032ddd"
+      }
+    ],
+    "links": [
+      {
+        "target": "vision.md",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "target": "../.atomic/vision-docs-setup.md",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "target": "../.atomic/recovery/accepted-decisions.json",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "target": "../.atomic/recovery/unanswered-batches.json",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      }
+    ]
+  },
+  {
+    "owner": "database",
+    "document": "docs/DATABASE.md",
+    "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/database.json",
+    "candidate": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/candidates/database.md",
+    "candidateSha256": "200ec100b73aa16c61575559c74a927aa91d1fdd78761f03c641d7a78a7bded1",
+    "sha256": "cab18931c997c545e1cd88f29847b965341bab0b7bb5b7df79755688cf4540ff",
+    "draftSha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4",
+    "approvalSummary": "Reconciled all 47 verified choices: Admin-only/no owner link/no analytics, UUIDs separate from permanent tokens, safe CSV imports, accepted content cardinality, independent activation, explicit Business enablement, successful lifetime Card history, expected versions, atomic audit/history, gated private images and atomic content revision behind fresh eligibility. Q9 retains its trailing space and separately attributed parent interpretation. Trade-offs include stale-edit rejection, fail-closed authoritative reads, audit-dependent commits, lifetime minimal history and reserved aliases. Adapter compatibility, numeric operating targets and provider review remain gates. Token sample/grammar, physical schema/timestamps, revision/projection mapping, key duration/replay, normalization/body bounds, image cleanup and restore contracts remain unfinished. All four peer checks are incomplete at checked hashes; no rewritten peer candidate was reread. No new database human choice identified. Root must append its peer record and freeze Draft/status-only Approved hashes before parent-chat approval. Approval remains null; no implementation is authorized.",
+    "unresolved": [
+      {
+        "key": "architecture.workers-adapter",
+        "kind": "deferred-gate",
+        "detail": "Select vinext/OpenNext only after actual compatibility tests on pinned application/framework/runtime/adapter; Workers target settled."
+      },
+      {
+        "key": "architecture.operational-targets",
+        "kind": "deferred-gate",
+        "detail": "Mandatory prelaunch provider-verified budget/SLA/latency/region/recovery-time/acceptable-data-loss choices. Q46 defers numbers; none invented."
+      },
+      {
+        "key": "security.privacy-data-minimization.provider-review",
+        "kind": "deferred-gate",
+        "detail": "Account-verify provider-native logs/Auth/Storage/backups, contents, retention, permissions, deletion and restore reconciliation. App periods do not imply provider deletion."
+      },
+      {
+        "key": "security.enforcement-verification",
+        "kind": "deferred-gate",
+        "detail": "Verify session/MFA/current membership, grants/RLS/restricted projection, CSRF, trusted-proxy/rate limits, decoder, fresh eligibility/current-image delivery and cache/HTTP ordering on actual runtime/provider."
+      },
+      {
+        "key": "database.legacy-token-inventory",
+        "kind": "deferred-gate",
+        "detail": "UNRESOLVED prelaunch legacy verification gate; source classification fact. Rationale: the exact report states missing external sample evidence is not a documentation-candidate blocker; inspect actual printed tokens and verify grammar/URL compatibility before legacy import, manufacture or implementation, and before public use. Preserve existing printed IDs exactly; no sample, entropy or compatibility result is inferred. Provenance: .atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/round-0/database.json SHA-256 5cae1031609f8d29603785f296c51ae027ca2bc10d827f44e3f620d204bb2996; .atomic/recovery/accepted-decisions.json decisions api.import-format/security.public-token-entropy; docs/DATABASE.md SHA-256 992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4. Original detail: Inventory/sample absent; actual printed-token grammar/URL compatibility unverified. Inspect real inventory without regeneration; not a documentation-candidate blocker."
+      },
+      {
+        "key": "database.public-token-policy",
+        "kind": "implementation-detail",
+        "detail": "New128-bit cryptorandom IDs, uniqueness/immutability and exact legacy preservation settled. Encoding/length/collation/case/URL parsing unfinished."
+      },
+      {
+        "key": "database.content-shape",
+        "kind": "implementation-detail",
+        "detail": "Physical columns/constraints, slug registry, settings schemas/versioning, same-Business Link membership, supported link-bearing types, deterministic order, distinct-label normalization and concurrent50-Link enforcement unfinished; representations remain proposals."
+      },
+      {
+        "key": "database.activation-timestamps",
+        "kind": "implementation-detail",
+        "detail": "Initial/latest activated_at summary semantics, timezone/precision and history creation/unassigned null representation unfinished; successful event times already required."
+      },
+      {
+        "key": "database.publication-revision",
+        "kind": "implementation-detail",
+        "detail": "Define write-version/content-revision mapping/increment scope and coherent same-revision projection/snapshot/read-retry mechanics. Q47 atomic content+revision/fresh gate/cache policy settled, no purge dependence."
+      },
+      {
+        "key": "database.history-audit-schema",
+        "kind": "implementation-detail",
+        "detail": "Minimal actor/reference/event schema, identity-change handling, append-only controls, rejected-attempt behavior and retention-expiry execution unfinished. Atomic mutation audit/history and lifetime history/90d audit/14d errors/24h raw-import-unused-temp policy settled."
+      },
+      {
+        "key": "api.idempotency-record-contract",
+        "kind": "implementation-detail",
+        "detail": "Q43 keys+versions settled; key-retention duration, scope/payload binding, authorized replay, durable original result, concurrent retry and crash/expiry behavior unfinished. No audit-period default substituted."
+      },
+      {
+        "key": "api.persistence-contracts",
+        "kind": "implementation-detail",
+        "detail": "Cursor bounds/stable sort, payload/field-error schemas, public/alias statuses, slug normalization, CSV quoting/BOM/headers, preview integrity/binding and truthful committed responses unfinished; Q42/Q44/Q45 settled."
+      },
+      {
+        "key": "database.image-reference-workflow",
+        "kind": "implementation-detail",
+        "detail": "Private immutable object/reference replacement/removal, replaced-object retention/cleanup execution/duration, orphan/crash/retry handling and post-commit responses unfinished. Current-reference gate required; no shared DB/Storage transaction or background worker assumed."
+      },
+      {
+        "key": "security.content-schema-details",
+        "kind": "implementation-detail",
+        "detail": "Unicode length counting, contact/label normalization, settings byte encoding/field schemas, hours timezone/overnight/overlap representation and combined JSON-body ceiling unfinished; selected maxima binding."
+      },
+      {
+        "key": "architecture.migration-restore-procedure",
+        "kind": "implementation-detail",
+        "detail": "Define tested staging-to-production promotion and relational/private-image backup/restore coverage, reconcile revoked access/removed content/versions/history/audit/current references before public reopening. No numbers/provider capabilities claimed."
+      },
+      {
+        "key": "peer.product",
+        "kind": "peer-check",
+        "detail": "PRODUCT_SPEC.md checked before/after unchanged at79656d86d686b014436461928c6122a5bbe7b0844a0d2d74e5730f61bbd8eb7a; stale Q32/Q35 history/activation entries. Alignment message not candidate-byte verification; root frozen-candidate check incomplete."
+      },
+      {
+        "key": "peer.architecture",
+        "kind": "peer-check",
+        "detail": "ARCHITECTURE.md checked before/after unchanged at424aacc36e1704547043e6fba004cd1eae03a6580c5b7a9959962a4458915fd8; stale Q46/Q47. Peer acknowledged version/revision distinction; no candidate reread, root check incomplete."
+      },
+      {
+        "key": "peer.flows-and-api",
+        "kind": "peer-check",
+        "detail": "FLOWS_AND_API.md checked before/after unchanged at23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44; stale Q42-45/Q47. Consolidated send queued, no reply/candidate verification recorded; not consent."
+      },
+      {
+        "key": "peer.security-and-edge-cases",
+        "kind": "peer-check",
+        "detail": "SECURITY_AND_EDGE_CASES.md checked before/after unchanged at456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf; stale Q43/Q46/Q47 cross-owner wording. Consolidated send queued, no reply/candidate verification recorded."
+      }
+    ],
+    "peerChecks": [
+      {
+        "document": "docs/PRODUCT_SPEC.md",
+        "sha256": "79656d86d686b014436461928c6122a5bbe7b0844a0d2d74e5730f61bbd8eb7a",
+        "outcome": "incomplete",
+        "detail": "Full bounded read bracketed by identical document_hashes. Scope/vocabulary/cardinality/lifecycle align except stale lines53/83/177/180 on Q32/Q35. One consolidated send delivered. Product alignment note does not verify rewritten bytes/hash; no consent inferred. Root current-candidate check needed.",
+        "current": false
+      },
+      {
+        "document": "docs/ARCHITECTURE.md",
+        "sha256": "424aacc36e1704547043e6fba004cd1eae03a6580c5b7a9959962a4458915fd8",
+        "outcome": "incomplete",
+        "detail": "Full bounded read bracketed by identical document_hashes. UUID/lifecycle/security/private-image/non-atomic Storage boundaries align. Lines65-71/99/137 still call Q46/Q47 pending. Consolidated send delivered; peer acknowledged version!=revision absent mapping and coherent loading. No rewritten candidate reread; root check incomplete.",
+        "current": false
+      },
+      {
+        "document": "docs/FLOWS_AND_API.md",
+        "sha256": "23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44",
+        "outcome": "incomplete",
+        "detail": "Full bounded read bracketed by identical document_hashes. Core lifecycle/history/import/concurrency align. Lines145/200/236/277/281-290 retain stale Q42-45/Q47 and candidate delivery.pending semantics. Policy applied in DB; key duration/public statuses/schema remain contracts. Consolidated send queued, no reply/candidate reread; never consent.",
+        "current": false
+      },
+      {
+        "document": "docs/SECURITY_AND_EDGE_CASES.md",
+        "sha256": "456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf",
+        "outcome": "incomplete",
+        "detail": "Full bounded read bracketed by identical document_hashes. Auth/RLS/lifetime history/atomic audit/retention/bounds/fresh image gate align. Lines185-186 retain stale Q43/Q46/Q47 unanswered claims; encoding/sample/normalization/provider gates genuinely unfinished. Consolidated send queued, no reply/candidate reread; no approval inferred.",
+        "current": false
+      }
+    ],
+    "verification": {
+      "unslopApplied": true,
+      "sourceReview": "Read complete vision/47-entry ledger, unanswered inventory, source manifest, empty new-answer file, all five original reports and all five documents. No continuation round-0 reports existed at available-file inspections before this report. Targeted successful transcript results140/224/340 and interpretation evidence143 verified Q9 trailing space, Q31-34/Q46-47. Prescribed skills/domain formats read directly, terms/decisions kept inline. Final owned document reread verifies sole normalized Draft status, accepted policies, Q9 evidence, all unfinished contracts and four incomplete checked-hash peer records. Source manifest used for provenance, not independently recomputed source hashes. No implementation/provider/security/migration/runtime test. Report manually checked for valid JSON, required fields/enums, null approval, 47 unique applied keys, zero newQuestions and four peerChecks; approvalSummary shortened below1600 characters.",
+      "crosslinkReview": "Manually resolved and read all11 distinct local Markdown targets in DATABASE.md: vision, four peer documents, accepted-decisions/unanswered-batches, original database report, continuation sources/new-answers and setup record. Repeated links resolve to the same targets. No fragment/anchor links or external URLs occur in owned document. Vision section citations and ledger key/Q references checked. Simple inline links and ATX headings used. Documentation source/link review only; peer provider URLs not claimed freshly fetched. Root must append plain peer record before freezing approval hashes and precompute the sole Draft-to-Approved status-line change; no postapproval material rewrite."
+    },
+    "sources": [
+      {
+        "path": "docs/vision.md",
+        "section": "Read in full, sections1-46; relationships3/6/10/11/17-22/43, content7-13/20/35-36, caching23-25, imports3/33, security26-27, scope15/37-38",
+        "status": "local-content-hashed",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "path": ".atomic/recovery/accepted-decisions.json",
+        "section": "Read in full; all47 decisions, exact Q9 trailing space and separate parentInterpretation/line143 evidence, Q31/Q35/Q40/Q43/Q46/Q47; all documentApprovals null",
+        "status": "local-content-hashed",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "path": ".atomic/recovery/unanswered-batches.json",
+        "section": "Read in full; zero complete unanswered batches, database stale keys/detail topics, accepted deferrals and absent approvals",
+        "status": "local-content-hashed",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "section": "Read in full; empty answers, no new human answer or approval inferred",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "section": "Read in full; retained paths/hash manifest and originalRunId, not independent decision evidence",
+        "status": "local-content-hashed",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "section": "Read in full; original decisions/unresolved/consistency/amendments reconciled against ledger, old approval null",
+        "status": "local-content-hashed",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json",
+        "section": "Read in full; vocabulary/cardinality/lifecycle and stale activation/history entries",
+        "status": "local-content-hashed",
+        "sha256": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "section": "Read in full; provider/environment/adapter boundaries and stale cache/operating-target entries",
+        "status": "local-content-hashed",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "section": "Read in full; stale API questions do not override ledger, unfinished retry/delivery details retained",
+        "status": "local-content-hashed",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "section": "Read in full; lifetime history, retention/access/bounds, original incomplete peer checks and provider gates",
+        "status": "local-content-hashed",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "path": "docs/PRODUCT_SPEC.md",
+        "section": "Full bounded read at checked hash; scope/terms/cardinality/lifecycle/history/readiness and stale lines53/83/177/180",
+        "status": "local-content-hashed",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "section": "Full bounded read at checked hash; lifecycle/grants/image/storage/cache boundaries, gates and stale lines65-71/99/137",
+        "status": "local-content-hashed",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "path": "docs/FLOWS_AND_API.md",
+        "section": "Full bounded read at checked hash; API/persistence/retry/import/image contracts, stale Q42-45/Q47 lines145/200/236/277/281-290",
+        "status": "local-content-hashed",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "path": "docs/SECURITY_AND_EDGE_CASES.md",
+        "section": "Full bounded read at checked hash; auth/RLS/history/retention/content/image gates, stale cross-owner lines185-186",
+        "status": "local-content-hashed",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "path": ".atomic/vision-docs-setup.md",
+        "section": "Read in full; historical ownership and original inspection, not current implementation evidence",
+        "status": "local-content-hashed",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "path": "C:/Users/elseh/.atomic/agent/sessions/--F--projects-NexTap02-main--/2026-10-02T19-19-48-634Z_01a0fe0e-f69a-7bb4-b4b7-77f5c0ee37ae.jsonl",
+        "section": "Targeted successful results140/224/340 and separately attributed parent interpretation143, with surrounding context; not whole transcript",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "docs/DATABASE.md",
+        "section": "Original read and final candidate reread; write_owned candidate SHA256 992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4 before any root peer-record append",
+        "status": "local-content-hashed",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      }
+    ],
+    "links": [
+      {
+        "target": "vision.md",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "target": "../.atomic/recovery/accepted-decisions.json",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "target": "../.atomic/recovery/unanswered-batches.json",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "target": "../.atomic/vision-docs-setup.md",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      }
+    ]
+  },
+  {
+    "owner": "flows-and-api",
+    "document": "docs/FLOWS_AND_API.md",
+    "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/flows-and-api.json",
+    "candidate": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/candidates/flows-and-api.md",
+    "candidateSha256": "24cf5a564886f6576e40d4df05201903ab632401321b0460c80a018af9e80f9f",
+    "sha256": "d45726739a45a08c5e75fbc3987f4178c90a679543b24311670230d12e4455cf",
+    "draftSha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa",
+    "approvalSummary": "Admin-only launch uses permanent direct-render Card URLs, independent Business slugs and reserved aliases, with private HTTP/JSON management, explicit commands, expected versions, idempotency keys, safe errors, standard Admin statuses and cursor lists. Card activation remains independent of Business enablement; transfer requires deactivation. Minimal successful Card history lasts for the Card lifetime, with audit/history atomic with data. Q47 settles atomic content revision and fresh eligibility/revision before cached content; the former delivery.pending proposal is removed. Strict gates cost authoritative reads and fail closed. Q9 exact trailing space and separately attributed parent interpretation remain preserved. Payload/public-status/replay/key-duration/import/image/schema contracts remain unfinished. Adapter/runtime compatibility, numerical operating targets, provider log/backup/restore review and missing legacy sample remain verification gates. Product/Architecture/Database contents align at checked hashes, but their historical checks and root final record remain incomplete. Security changed after the bounded content read; its newer hash is unreviewed. No new human choice or approval is inferred. Root must record final checks before freezing hashes; approval may name only the exact Draft-to-Approved status-line replacement. No implementation is authorized.",
+    "unresolved": [
+      {
+        "key": "architecture.workers-adapter",
+        "kind": "deferred-gate",
+        "detail": "Choose vinext/OpenNext only after actual compatibility proof on a pinned application/framework/runtime combination. Workers is settled, adapter/runtime enforcement is not verified."
+      },
+      {
+        "key": "architecture.operational-targets",
+        "kind": "deferred-gate",
+        "detail": "Q46 leaves budget, SLA, latency, region, recovery time and acceptable data loss as mandatory provider-verified prelaunch decisions. No numerical targets selected."
+      },
+      {
+        "key": "security.privacy-data-minimization.provider-review",
+        "kind": "deferred-gate",
+        "detail": "Account-verify native log/backup contents, retention, access, deletion and restore reconciliation. Application audit/error/temp periods do not prove provider deletion."
+      },
+      {
+        "key": "security.enforcement-verification",
+        "kind": "deferred-gate",
+        "detail": "Verify actual session/MFA/current membership, CSRF, identity-scoped clients, grants/RLS/restricted projections, tenant children, trusted-proxy/rate controls, decoder and fresh page/image gates on selected runtime/provider."
+      },
+      {
+        "key": "database.legacy-token-inventory",
+        "kind": "deferred-gate",
+        "detail": "UNRESOLVED prelaunch legacy verification gate. Inventory/sample is absent; grammar, case/URL compatibility and entropy remain unverified. Inspect actual printed tokens before legacy import or public use without regenerating/normalizing them. No sample or compatibility fact inferred; absence does not block a truthful documentation candidate."
+      },
+      {
+        "key": "database.public-token-policy",
+        "kind": "implementation-detail",
+        "detail": "Define new-token encoding/grammar, immutable storage, case/collation and URL parsing within accepted 128-bit cryptorandom entropy and exact legacy-preservation requirements."
+      },
+      {
+        "key": "database.content-shape",
+        "kind": "implementation-detail",
+        "detail": "Physical schema/constraints, slug registry/normalization, supported link-bearing types, Section/icon schemas, deterministic order, distinct-label/count enforcement and optional image metadata remain unfinished. Accepted cardinalities/contacts/hours remain binding."
+      },
+      {
+        "key": "database.activation-timestamps",
+        "kind": "implementation-detail",
+        "detail": "Define initial/latest activation summary meaning, event null representation and time precision without changing accepted lifecycle/history."
+      },
+      {
+        "key": "database.publication-revision",
+        "kind": "implementation-detail",
+        "detail": "Define expected-write-version/content-revision mapping, advancing mutations and coherent restricted projection/snapshot/read-retry mechanism. Atomic content-plus-revision and fresh revision-cache policy are settled; equality of version concepts is not."
+      },
+      {
+        "key": "database.history-audit-schema",
+        "kind": "implementation-detail",
+        "detail": "Finish minimized actor/event/reference schema, identity-change handling, append-only controls, rejected-attempt behavior and accepted retention-expiry execution. Required successful mutation audit/history remain atomic with data."
+      },
+      {
+        "key": "api.mutation-publication",
+        "kind": "implementation-detail",
+        "detail": "Finish committed result/version/revision schema, response-loss reconciliation and no-op version/audit/status outcomes. Former delivery.pending example removed; no global-purge dependence, new publish step or rollback claim after commit."
+      },
+      {
+        "key": "api.idempotency-record-contract",
+        "kind": "implementation-detail",
+        "detail": "Q43 keys plus versions, same-payload original-result replay and different-payload rejection are settled. Key-retention duration, scope/payload binding, durable result persistence, authorized replay, concurrent retries, crash/expiry behavior and exact per-operation coverage remain unfinished. Audit/temp retention is not a default."
+      },
+      {
+        "key": "api.public-response-contract",
+        "kind": "implementation-detail",
+        "detail": "Finish public lifecycle/alias statuses, safe notices, slug normalization, redirect/conditional response and browser/shared-cache contracts. Preserve the source-defined Inactive notice, private-data nondisclosure and fresh eligibility/revision/current-image gates."
+      },
+      {
+        "key": "api.payload-error-contract",
+        "kind": "implementation-detail",
+        "detail": "Finish exact routes/child/image payloads, fieldErrors/codes, malformed input/media/body statuses, key-conflict/no-op results and retry headers. Catalog/examples remain proposals within accepted methods/envelope/status classes."
+      },
+      {
+        "key": "api.list-pagination-details",
+        "kind": "implementation-detail",
+        "detail": "Define default/maximum bounds, stable sort fields, search/filter schema, cursor validation and concurrent-change behavior. Opaque cursors and nextCursor are settled; history pagination is a catalog proposal."
+      },
+      {
+        "key": "api.csv-preview-contract",
+        "kind": "implementation-detail",
+        "detail": "Define quoting/BOM/header parsing, one-based row reporting, preview integrity/binding and commit/result schemas. CSV 10000 rows/10 MiB, 30-minute preview and atomic unchanged-skip/new-Inactive policy are binding."
+      },
+      {
+        "key": "api.image-reference-workflow",
+        "kind": "implementation-detail",
+        "detail": "Finish replacement/removal, immutable-object/current-reference schema, completion, replaced-object cleanup duration/execution and orphan/crash/retry handling. Private fresh current-reference delivery is required; database/Storage have no shared transaction and post-commit cleanup cannot simulate rollback."
+      },
+      {
+        "key": "security.content-schema-details",
+        "kind": "implementation-detail",
+        "detail": "Define combined JSON-byte ceiling, Unicode counting, contact/label normalization, settings field/byte rules and weekly-hours timezone/overnight/overlap representation within accepted bounds."
+      },
+      {
+        "key": "architecture.cache-storage-restore",
+        "kind": "implementation-detail",
+        "detail": "Define/test framework/HTTP/CDN ordering, coherent revision loading, private object cleanup, migration promotion and relational/image restore reconciliation before public reopening. No cache bypass, invented timing guarantee or provider backup capability."
+      },
+      {
+        "key": "peer.flows-and-api.security-and-edge-cases",
+        "kind": "peer-check",
+        "detail": "Full read at 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf, stable before/after, found stale owner-answer/consistency wording at lines 185-188 where Q43/Q46/Q47 apply. Security acknowledged repair, not consent. Later observed hash 8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7 was not content-read, so current Security check remains incomplete."
+      },
+      {
+        "key": "peer.flows-and-api.final-root-record",
+        "kind": "peer-check",
+        "detail": "Product/Architecture/Database semantic contents align at checked hashes but carry historical incomplete peer checks. Root final plain peer-check record and frozen approval hashes remain unfinished. Three queued sends and Security acknowledgment certify neither later bytes nor approval. Parent status handoff delivered after its live target appeared in an inbound message; no parent answer inferred."
+      }
+    ],
+    "peerChecks": [
+      {
+        "document": "docs/PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged in later hash-only observation. Admin-only scope/vocabulary/cardinality/lifecycle/direct routes, expected versions, retry/status/cursor policy, atomic audit/history and revision-cache contracts align. Physical/API/runtime gates remain explicit. Historical peer records and root final frozen-hash check remain incomplete. One consolidated note queued to discovered future Product target; queue receipt is not consent.",
+        "current": true
+      },
+      {
+        "document": "docs/ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged in later hash-only observation. Scope/cardinality/lifecycle/security align; atomic content/revision, fresh fail-closed gate, coherent loading, distinct edit version/revision, non-atomic Storage and truthful commit results align. Adapter/operating/provider gates remain genuine. Historical peer records/root final check remain incomplete. One note queued to discovered future Architecture target; no consent inferred.",
+        "current": true
+      },
+      {
+        "document": "docs/DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged in later hash-only observation. UUID/token distinction, same-Business cardinality, lifecycle/history, safe CSV import, versions/revisions, atomic audit and private-image workflow align with ledger/API candidate. Physical schema/timestamp/normalization/retry/cleanup details and legacy evidence remain unfinished. Historical checks/root final record remain incomplete. One note queued to discovered future Database target; no approval inferred.",
+        "current": true
+      },
+      {
+        "document": "docs/SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7",
+        "outcome": "incomplete",
+        "detail": "Latest hash-only observation; content read was at 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf, identical before/after. Auth/lifecycle/exposure/private images/history/retention/bounds align there, but lines 185-188 retain stale API/cache/consistency wording where Q43/Q46/Q47 apply. One consolidated note delivered to discovered live Security stage; acknowledgment describes repair, not inspected revised bytes or consent. Newer candidate content/hash not reread within the bounded exchange. Root must mark incomplete before approval.",
+        "current": true
+      }
+    ],
+    "verification": {
+      "unslopApplied": true,
+      "sourceReview": "Read full vision/47-entry ledger/unanswered inventory, own and four original peer reports, current root sources/empty new-answer file, five document snapshots and three retained current-run candidate reports. Directly checked successful transcript results 140/330/340 and parent relay 143 with read-tool surrounding context; Q9 answer retains its trailing space and parent interpretation stays separately attributed. Read required skills/domain formats directly; terms/decisions remain inline. Reconciled stale Q42-Q45 and Q47 publication wording without reopening choices. Bounded path search found assets and no matching package/instruction/CSV/XLSX inventory; ancestor/artwork facts remain historical/unverified. Applied unslop, wrote via write_owned and read back complete candidate; sole status line exact Draft, candidate SHA256 6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa. Read-tool selector attempt 140+143+330+340 failed, then one valid bounded comma-range read supplied evidence; no research/wait loop. Security later hash change is hash-only evidence, explicitly incomplete. Report manually reviewed for required exact fields/enums, 47 unique applied keys, four checked-hash peer entries, no newQuestions and null approval. No implementation/runtime/security tests, Git, credentials, publication, delegation, workflow or question tools used. Root owns final peer record and exact status-only approval hashes.",
+      "crosslinkReview": "Searched inline Markdown links across all five bounded snapshots and owned readback. Every local target exists and was read: vision/four companions, ledger/unanswered inventory, original owner report links, current sources/new-answers, historical setup record and retained earlier continuation sources/new-answers. Relative paths resolve from docs/. No local fragment links occur, so no anchor target required validation. Numbered vision citations and ledger keys/result references verified. ATX headings/simple inline links used. No external source links added to owned API document; peer provider URLs were not freshly fetched in this API pass. This verifies source/crosslink consistency only, not implementation or later peer bytes. Root must append its final plain peer-check record before freezing approval hashes; only exact replacement of Draft status line with 'Status: Approved. Documentation only; no implementation is authorized.' may follow scoped approval."
+    },
+    "sources": [
+      {
+        "path": "docs/vision.md",
+        "section": "Read in full, sections 1 to 46; permanent Card identity/routes, actors, cardinality, rendering, content, imports, images, cache, management protection and external payment/review boundaries checked.",
+        "status": "local-content-hashed",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "path": ".atomic/recovery/accepted-decisions.json",
+        "section": "Read in full; all 47 actual answers, exact selected descriptions, successful-result mappings, Q9 trailing space and separately attributed parent interpretation, accepted deferrals and null document approvals.",
+        "status": "local-content-hashed",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "path": ".atomic/recovery/unanswered-batches.json",
+        "section": "Read in full; zero complete unanswered original batches, stale API keys answered by Q20-Q23/Q42-Q45, key-duration and mutation-publication detail topics retained as unfinished contracts.",
+        "status": "local-content-hashed",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/new-answers.json",
+        "section": "Read in full; actual-answer authority with empty answers array; no new human answer or document approval.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/sources.json",
+        "section": "Read in full; original and retained continuation source/hash inventory used for provenance, without independently recomputing source-file hashes.",
+        "status": "local-content-hashed",
+        "sha256": "01d306a649278b360f9579abd76a0bada6c010eaa9b4b00446dc9d5a1bed6036"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "section": "Read in full; original API evidence, stale null answers, mutation-publication/retry proposals and old consistency state reconciled against authoritative ledger.",
+        "status": "local-content-hashed",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json",
+        "section": "Read in full; scope/lifecycle/cardinality evidence, exact Q9 custom answer and stale activation/history entries distinguished from ledger.",
+        "status": "local-content-hashed",
+        "sha256": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "section": "Read in full; selected providers/environments/adapter deferral and stale Q46/Q47 pending entries; genuine verification contracts retained.",
+        "status": "local-content-hashed",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "section": "Read in full; identifiers/import/migration/transaction evidence and physical schema/token/timestamp proposals separated from accepted policy.",
+        "status": "local-content-hashed",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "section": "Read in full; accepted security/retention/history/audit/bounds and genuine implementation/provider gates; historical peer state is not present approval.",
+        "status": "local-content-hashed",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/product.json",
+        "section": "Read in full; retained candidate/report contract, 47 applied keys, missing legacy gate normalization, historical incomplete peer hashes and null approval. No peer candidate was reauthored.",
+        "status": "local-content-hashed",
+        "sha256": "596f4c64bd0ffe18f9d047ead16036af0db6dc09acdaa740385662b69c27e4ed"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/architecture.json",
+        "section": "Read in full; retained candidate and revision-cache/version distinction, deferred numerical/adapter/provider gates, unfinished API contracts and historical peer checks.",
+        "status": "local-content-hashed",
+        "sha256": "2beecc45f4869b5d0ff57278be0c0499c5d5875f91d96fc18685c4cb2bef24aa"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/database.json",
+        "section": "Read in full; retained candidate, expected versions/revisions/audit/history/private objects, genuine unfinished physical and retry contracts and historical peer checks.",
+        "status": "local-content-hashed",
+        "sha256": "04dc0c040132f0bf67b4ef1dfb5f1c0f2a93b4e00030f6c707b2984819ec4c6d"
+      },
+      {
+        "path": "docs/PRODUCT_SPEC.md",
+        "section": "Full bounded peer read at 0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55, identical before/after and later hash observation; semantic contracts align, historical peer checks remain incomplete.",
+        "status": "local-content-hashed",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "section": "Full bounded peer read at 1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70, identical before/after and later hash observation; coherent fresh revision selection and deferred gates align.",
+        "status": "local-content-hashed",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "path": "docs/DATABASE.md",
+        "section": "Full bounded peer read at 992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4, identical before/after and later hash observation; lifecycle/persistence/revision/audit/image contracts align.",
+        "status": "local-content-hashed",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "path": "docs/SECURITY_AND_EDGE_CASES.md",
+        "section": "Full bounded peer read at 456608dcc3d03e4dda5e6483051249367c9e1ca00d9375fd7691777831e641bf, identical before/after. Later hash-only observation 8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7; newer content not reread.",
+        "status": "local-content-hashed",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "path": "docs/FLOWS_AND_API.md",
+        "section": "Original full read and reconciled candidate full readback; write_owned/document_hashes SHA-256 6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa before any root final peer-record append.",
+        "status": "local-content-hashed",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "path": ".atomic/vision-docs-setup.md",
+        "section": "Read in full to verify peer crosslink target and historical inspection/ownership provenance; old launch/interview status is not current evidence.",
+        "status": "local-content-hashed",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "section": "Read in full as retained peer local-link target; empty answers, not current-run policy or approval evidence.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "section": "Read in full as retained peer local-link target and historical manifest.",
+        "status": "local-content-hashed",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "path": "C:/Users/elseh/.atomic/agent/sessions/--F--projects-NexTap02-main--/2026-10-02T19-19-48-634Z_01a0fe0e-f69a-7bb4-b4b7-77f5c0ee37ae.jsonl",
+        "section": "Targeted successful result lines 140, 330 and 340 and separately attributed parent relay at 143, with read-tool surrounding context; verifies Q9 exact trailing space and Q42-Q47 actual selections. Not a full transcript review.",
+        "status": "external-not-content-hashed"
+      }
+    ],
+    "links": [
+      {
+        "target": "vision.md",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "target": "../.atomic/recovery/accepted-decisions.json",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "target": "../.atomic/recovery/unanswered-batches.json",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/new-answers.json",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/sources.json",
+        "sha256": "01d306a649278b360f9579abd76a0bada6c010eaa9b4b00446dc9d5a1bed6036"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "SECURITY_AND_EDGE_CASES.md",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      }
+    ]
+  },
+  {
+    "owner": "security-and-edge-cases",
+    "document": "docs/SECURITY_AND_EDGE_CASES.md",
+    "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/security-and-edge-cases.json",
+    "candidate": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/candidates/security-and-edge-cases.md",
+    "candidateSha256": "b0ad2f428e8a131364de054bf421acc22390ea044fb1346ed1cfecddadcfc9ed",
+    "sha256": "27fa07f11d094580f699ef70a24b84a2d3e0db7d17095947cffb971f8fdebe75",
+    "draftSha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7",
+    "approvalSummary": "Admin-only launch uses individual mandatory TOTP, current membership, bounded sessions and fresh sensitive-action authentication. Public tokens grant no permissions. Fresh fail-closed page eligibility and private current-reference image gates precede cache delivery. Q47 selects atomic content/revision saves and Business-plus-revision cached public content without purge-dependent publication. Expected versions reject stale edits; successful data mutations, minimized audit and required lifetime Card history commit atomically. Q42-Q45 settle commands, keys plus versions, Admin statuses and cursors. Safe content/image/CSV bounds, tiered throttles and minimized retention remain binding. Operator steps, authoritative-read dependence and audit-dependent commits are accepted costs. Adapter/runtime enforcement, numerical operating targets, provider-native retention/restore review and missing legacy-sample verification remain gates. Physical schema, normalization/body bounds, replay duration/storage, public response, image cleanup and recovery contracts remain unfinished. Product/Architecture/Database are consistent at checked hashes; API remains incomplete at its stale checked snapshot, with repaired bytes unread. Root records final peer checks before freezing hashes. Approval is null; only the precomputed Draft-to-Approved status-line change may follow scoped parent approval. No implementation is authorized.",
+    "unresolved": [
+      {
+        "key": "architecture.workers-adapter",
+        "kind": "deferred-gate",
+        "detail": "Accepted deferral: select vinext/OpenNext only after actual project compatibility on a pinned application/framework/runtime combination. No compatibility test performed."
+      },
+      {
+        "key": "architecture.operational-targets",
+        "kind": "deferred-gate",
+        "detail": "Q46 defers numerical budget, SLA, latency, region, recovery-time and acceptable-data-loss targets to mandatory prelaunch decisions verified against actual provider plans. None invented."
+      },
+      {
+        "key": "security.privacy-data-minimization.provider-review",
+        "kind": "deferred-gate",
+        "detail": "Account-verify provider-native logs/Auth/Storage/backups, contents, retention periods, permissions, deletion and restore reconciliation. Application expiry does not establish provider deletion."
+      },
+      {
+        "key": "security.enforcement-verification",
+        "kind": "deferred-gate",
+        "detail": "Verify sessions/MFA/current membership, recovery, CSRF, identity-scoped grants/RLS/restricted projection, same-Business constraints, decoder, trusted-proxy/rate controls and fresh public/current-image cache ordering against actual runtime/provider. No controls implemented or tested."
+      },
+      {
+        "key": "database.legacy-token-inventory",
+        "kind": "deferred-gate",
+        "detail": "UNRESOLVED prelaunch legacy verification gate. Actual inventory/sample is absent; grammar, entropy and URL compatibility remain unverified. Verify real printed tokens before legacy import, manufacture, implementation or public use. Preserve IDs exactly, without regeneration or normalization to fit new rules. Missing evidence does not block a truthful documentation candidate. Authority: user continuation scope and accepted ledger api.import-format/security.public-token-entropy; retained seed-import reports expose the same missing-sample gate. No format/sample/result inferred."
+      },
+      {
+        "key": "database.public-token-policy",
+        "kind": "implementation-detail",
+        "detail": "Define encoding, length, collation/case and URL parsing while preserving at least 128 cryptographically random bits for new IDs and exact legacy values."
+      },
+      {
+        "key": "database.physical-schema",
+        "kind": "implementation-detail",
+        "detail": "Finish physical constraints, slug registry/normalization, supported link-bearing Section types, deterministic order/distinct-label/count enforcement, image metadata and activation timestamp semantics. Cardinalities/lifecycle already settled."
+      },
+      {
+        "key": "database.publication-revision",
+        "kind": "implementation-detail",
+        "detail": "Define revision increment scope, any expected-version mapping and coherent restricted projection/snapshot/read-retry mechanism. Content-plus-revision atomicity and current Business/revision cache policy are settled under Q47."
+      },
+      {
+        "key": "security.audit-history-schema",
+        "kind": "implementation-detail",
+        "detail": "Define minimized event/actor references, append-only enforcement, identity-change handling, rejected-attempt audit behavior and expiry execution. Successful mutation/history/audit atomicity and accepted retention remain binding."
+      },
+      {
+        "key": "api.retry-record-contract",
+        "kind": "implementation-detail",
+        "detail": "Q43 selects keys plus versions and original-result replay. Key scope/duration, payload binding, atomic durable result storage, authorized replay, concurrent retries and crash/post-expiry behavior remain unfinished; audit retention is no default."
+      },
+      {
+        "key": "api.representation-contract",
+        "kind": "implementation-detail",
+        "detail": "Complete public lifecycle/alias statuses and cache/disclosure behavior, payload/field-error schemas, cursor bounds, no-op results, CSV parsing/BOM/header/preview binding and truthful committed revision responses. Accepted methods, envelope, status classes and cursors stay settled."
+      },
+      {
+        "key": "architecture.image-storage-workflow",
+        "kind": "implementation-detail",
+        "detail": "Finish private immutable objects/reference replacement/removal, replaced-object retention, orphan cleanup/retry/crash behavior and completion semantics. PostgreSQL/Storage are non-atomic; current-reference gating and unused-temp 24-hour expiry remain required."
+      },
+      {
+        "key": "architecture.migration-restore-procedure",
+        "kind": "implementation-detail",
+        "detail": "Define tested promotion and relational/private-object restore coverage. Reconcile revoked access, removed content, versions/history/audit and references before public reopening; provider review and deferred recovery targets remain gates."
+      },
+      {
+        "key": "security.json-body-limit",
+        "kind": "implementation-detail",
+        "detail": "Combined JSON request-byte ceiling remains unset. Accepted per-field/settings/image/CSV maxima stay binding; no extra numeric default selected."
+      },
+      {
+        "key": "security.content-schema-details",
+        "kind": "implementation-detail",
+        "detail": "Define Unicode counting, contact/label normalization, registered Section/icon fields and byte encoding, hours timezone/overnight/overlap representation within approved limits."
+      },
+      {
+        "key": "peer.security.flows-and-api",
+        "kind": "peer-check",
+        "detail": "Full read at 23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44, identical before/after and at later hash-only observation. Core journeys/gates/history/import align, but lines 145, 187-200, 236, 277 and 281-290 lag Q42-Q47. Owner reports repair in progress; repaired candidate bytes/hash were not read. Root must record final current-candidate checks before approval freeze; no consent inferred."
+      }
+    ],
+    "peerChecks": [
+      {
+        "document": "docs/PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged at later hash-only observation. Scope/vocabulary/cardinality/lifecycle, lifetime history, expected versions/atomic audit, API/status/cursor constraints, public/image gates and Q47 revision cache align with ledger. Retained historical peer records predate Security/API repairs and remain incomplete for later bytes. One acknowledgment queued to discovered future Product target; transport is not approval.",
+        "current": true
+      },
+      {
+        "document": "docs/ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged at later hash-only observation. Scope/terms/cardinality/lifecycle, fresh fail-closed eligibility/current-image gates, coherent Business/revision cache, atomic audit/history, private Storage and Q46/Q17 gates align. Runtime/provider/cache/image/restore mechanisms remain unfinished. One acknowledgment queued to discovered future Architecture target; no later bytes or approval certified.",
+        "current": true
+      },
+      {
+        "document": "docs/DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4",
+        "outcome": "consistent",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged at later hash-only observation. UUID/public-token separation, cardinality/tenant constraints, lifecycle, safe imports, expected versions, atomic audit/history, retention, coherent Q47 projection and non-atomic DB/Storage agree. Physical schema, missing sample, normalization, replay/image/restore details remain unfinished. One acknowledgment queued to discovered future Database target; no approval inferred.",
+        "current": true
+      },
+      {
+        "document": "docs/FLOWS_AND_API.md",
+        "sha256": "23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44",
+        "outcome": "incomplete",
+        "detail": "Full bounded read bracketed by identical hashes, unchanged at later hash-only observation. Core scope/vocabulary/cardinality/lifecycle/auth/public-image gate/history/import contracts align. Q42-Q45 pending claims and speculative delivery.pending/future-revision language lag verified answers/Q47. Consolidated request delivered to live API owner; its repair notice does not verify repaired bytes. Repaired candidate not read; current/frozen-root check incomplete, no consent inferred.",
+        "current": false
+      }
+    ],
+    "verification": {
+      "unslopApplied": true,
+      "sourceReview": "Read full vision, verified47 ledger, unanswered inventory, original five reports, current root sources/empty new answers, imported three peer candidates and seed manifest. Targeted successful parent results140/330/340 and separate interpretation143 verify Q9 trailing space and Q42-Q47 actual answers. All prescribed skills and domain formats read directly. Three cited Supabase guides directly read, including remaining truncated artifact ranges, for MFA/grants/RLS/Storage facts. Current path inspection found no package/migration/CSV/XLSX sample; ancestor absence stays historical. Original Security and written 245-line candidate read fully; sole exact Draft status, Q9 evidence, all genuine gates/contracts and one incomplete API peer check verified. Candidate SHA256 8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7. Four peer hashes stable before/after full content read and at later hash-only observation. Initial transcript selector failed once; corrected range selector succeeded, no failure loop or inferred result. Parent became reachable through inbound Intercom and received concise status. No implementation/runtime checks, Git, credentials, publication, delegation, workflow or user-question tools. Report manually checked for required fields/enums, 47 unique applied keys, null approval, empty questions, four actual peer checks and approvalSummary below1600 characters; readback follows writing.",
+      "crosslinkReview": "Searched links/ATX headings/status in five checked documents and owned readback. Resolved/read all11 unique local owned targets: vision, four companions, setup, ledger, unanswered inventory, original Security report and current sources/new answers. Peer local links to earlier root sources/new answers and original architecture/database reports were also read and exist. No local link used a fragment, so no anchor target required validation. Numbered vision and ledger references checked. Three owned external Supabase links fetched; no implementation or Markdown-renderer claim. Simple inline links and ATX headings retained. Root must append plain current peer-check record before freezing approval hashes and name only the exact precomputed Draft-to-Approved status-line replacement. API repaired bytes remain unread; all subsequent hash drift must be recorded incomplete until checked. No material postapproval rewrite or gate waiver authorized."
+    },
+    "sources": [
+      {
+        "path": "docs/vision.md",
+        "section": "Read in full, sections 1 to 46; source citations for permanent IDs, cardinality, actors, content, imports, caching, security and payment/review navigation checked.",
+        "status": "local-content-hashed",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "path": ".atomic/recovery/accepted-decisions.json",
+        "section": "Read in full; all 47 actual answers, result references, exact Q9 trailing-space custom answer and separately attributed parent interpretation, accepted deferrals and null document approvals.",
+        "status": "local-content-hashed",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "path": ".atomic/recovery/unanswered-batches.json",
+        "section": "Read in full; zero complete unanswered batches, Security implementation-bound topics and stale owner claims reconciled without reasking settled policy.",
+        "status": "local-content-hashed",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/new-answers.json",
+        "section": "Read in full; empty actual-answer array, no new choice or approval inferred.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/sources.json",
+        "section": "Read in full; retained source and seed report paths/hashes used as provenance, not independent policy evidence.",
+        "status": "local-content-hashed",
+        "sha256": "01d306a649278b360f9579abd76a0bada6c010eaa9b4b00446dc9d5a1bed6036"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "section": "Read in full; original Security policies retained, stale cache/API dependencies reconciled, genuine enforcement/provider/bounds gates preserved.",
+        "status": "local-content-hashed",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json",
+        "section": "Read in full; original scope/lifecycle/cardinality evidence, stale activation/history claims and no document approval.",
+        "status": "local-content-hashed",
+        "sha256": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json",
+        "section": "Read in full; accepted adapter/environment/provider gates and stale Q46/Q47 pending claims.",
+        "status": "local-content-hashed",
+        "sha256": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json",
+        "section": "Read in full; original persistence proposals, stale policy dependencies and genuine encoding/schema/timestamp contracts.",
+        "status": "local-content-hashed",
+        "sha256": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json",
+        "section": "Read in full; stale API answer entries and unfinished retry/publication/schema topics separated using ledger.",
+        "status": "local-content-hashed",
+        "sha256": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/product.json",
+        "section": "Read in full; imported candidate choices and retained historical incomplete peer evidence, legacy sample copied as unresolved prelaunch gate.",
+        "status": "local-content-hashed",
+        "sha256": "596f4c64bd0ffe18f9d047ead16036af0db6dc09acdaa740385662b69c27e4ed"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/architecture.json",
+        "section": "Read in full; imported candidate gates and retained historical peer evidence; no human approval.",
+        "status": "local-content-hashed",
+        "sha256": "2beecc45f4869b5d0ff57278be0c0499c5d5875f91d96fc18685c4cb2bef24aa"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/database.json",
+        "section": "Read in full; imported persistence candidate, open physical/replay/storage contracts and legacy verification gate.",
+        "status": "local-content-hashed",
+        "sha256": "04dc0c040132f0bf67b4ef1dfb5f1c0f2a93b4e00030f6c707b2984819ec4c6d"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/seed-import.json",
+        "section": "Read in full; completed Product/Architecture/Database imports and null approval, not new decision evidence.",
+        "status": "local-content-hashed",
+        "sha256": "97a4a93f049d0f7a132d22e4e993da50e6ee107e3dc15c7063c6db4657f88ba5"
+      },
+      {
+        "path": "docs/PRODUCT_SPEC.md",
+        "section": "Full bounded content read at 0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55; scope/vocabulary/cardinality/lifecycle/API/security/cache alignment checked.",
+        "status": "local-content-hashed",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "path": "docs/ARCHITECTURE.md",
+        "section": "Full bounded content read at 1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70; fresh gates, revision coherence, atomicity and deferred runtime/provider/operating contracts checked.",
+        "status": "local-content-hashed",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "path": "docs/DATABASE.md",
+        "section": "Full bounded content read at 992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4; cardinality/identity/tenant/history/audit/retention/revision and non-atomic Storage boundaries checked.",
+        "status": "local-content-hashed",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "path": "docs/FLOWS_AND_API.md",
+        "section": "Full bounded read at 23d970e19053fb8a92a7b7507af10f7a319e03fcb219a016eb18072a486b0f44; stale Q42-Q45 and speculative delivery/revision text recorded incomplete; repaired bytes not reread.",
+        "status": "local-content-hashed",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "path": "docs/SECURITY_AND_EDGE_CASES.md",
+        "section": "Original and written candidate read in full; normalized sole Draft status, exact Q9 evidence, accepted policies, all open gates and peer snapshot records checked. Candidate SHA256 8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7.",
+        "status": "local-content-hashed",
+        "sha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7"
+      },
+      {
+        "path": ".atomic/vision-docs-setup.md",
+        "section": "Read in full; historical documentation ownership and ancestor inspection, not current implementation evidence.",
+        "status": "local-content-hashed",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "path": ".atomic/recovery/legacy-gate-policy.md",
+        "section": "Read in full; exact known seed missing-sample facts remain visible unresolved prelaunch gates, with no sample/compatibility result invented.",
+        "status": "local-content-hashed",
+        "sha256": "f6234f299faf52c2f95ab2c76916a17429d0ba0864f88bf132badaaae0ecc364"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/new-answers.json",
+        "section": "Read for peer local crosslink verification; empty answers.",
+        "status": "local-content-hashed",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "path": ".atomic/workflows/runs/vision-docs-continuation/5c5087c4-cc46-4444-b870-670018f926b6/sources.json",
+        "section": "Read for peer local crosslink verification; retained evidence inventory.",
+        "status": "local-content-hashed",
+        "sha256": "2e193b049afb8cada5e1a8407ea9abd1f2db1506dfcc8fa9dd88225b3d615c93"
+      },
+      {
+        "path": "C:/Users/elseh/.atomic/agent/sessions/--F--projects-NexTap02-main--/2026-10-02T19-19-48-634Z_01a0fe0e-f69a-7bb4-b4b7-77f5c0ee37ae.jsonl",
+        "section": "Targeted successful results at lines 140, 330 and 340 plus separate parent interpretation evidence at line 143 and reader-supplied surrounding context; Q9 trailing space/Q42-Q47 actual answers checked, not whole transcript.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://supabase.com/docs/guides/auth/auth-mfa",
+        "section": "Direct official-source read including remaining artifact lines; TOTP, enrollment/challenge, aal2 and MFA enforcement beyond UI checked. Provider capability does not verify NexTap controls.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+        "section": "Direct official-source read including remaining artifact ranges; separate grants/policies, views, stale JWT membership and privileged bypass checked.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "https://supabase.com/docs/guides/storage/security/access-control",
+        "section": "Direct official-source read; private object policies and unrestricted service-key bypass checked.",
+        "status": "external-not-content-hashed"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/grill-with-docs/SKILL.md",
+        "section": "Read directly; explicit task restrictions override Skill invocation, delegation, questions and waits.",
+        "status": "local-content-hashed",
+        "sha256": "abc0fa7948db18b5fb0e1cc1c522ac5ff47d874e2da1e5df60619d79be11f38b"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/grilling/SKILL.md",
+        "section": "Read directly; actual answers and prerequisite-aware frontier retained, no new Security human choice identified.",
+        "status": "local-content-hashed",
+        "sha256": "d806733216b16e51adad834e724bfec5540a436d06395bfc75b843cda9f7404b"
+      },
+      {
+        "path": "C:/Users/elseh/.agents/skills/domain-modeling/SKILL.md",
+        "section": "Read directly with glossary and ADR format references; terms and qualifying decisions stay inline.",
+        "status": "local-content-hashed",
+        "sha256": "b62d997256cc073e123d4303da8e9db00db0e28de9739660ca3e55ab76e09cdb"
+      },
+      {
+        "path": "C:/Users/elseh/AppData/Local/atomic-herdr/node_modules/@bastani/atomic/dist/builtin/workflows/skills/unslop/SKILL.md",
+        "section": "Read in full; plain prose/ATX headings reviewed and exact answer evidence preserved.",
+        "status": "local-content-hashed",
+        "sha256": "6cd1f15238fa2348f30e669f019d815eecf7345392ca7948a56ad27b59032ddd"
+      }
+    ],
+    "links": [
+      {
+        "target": "vision.md",
+        "sha256": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5"
+      },
+      {
+        "target": "../.atomic/recovery/accepted-decisions.json",
+        "sha256": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json",
+        "sha256": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d"
+      },
+      {
+        "target": "../.atomic/recovery/unanswered-batches.json",
+        "sha256": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/new-answers.json",
+        "sha256": "b4b05e43233b4f8ce845e4584e0bda5af2f6f18af7ebf98e855d55b432c28a58"
+      },
+      {
+        "target": "../.atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/sources.json",
+        "sha256": "01d306a649278b360f9579abd76a0bada6c010eaa9b4b00446dc9d5a1bed6036"
+      },
+      {
+        "target": "../.atomic/vision-docs-setup.md",
+        "sha256": "eca250fcfa7950480545fa078ba183431f752978cd65cf7d57d579147fab0479"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      },
+      {
+        "target": "PRODUCT_SPEC.md",
+        "sha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55"
+      },
+      {
+        "target": "ARCHITECTURE.md",
+        "sha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70"
+      },
+      {
+        "target": "DATABASE.md",
+        "sha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4"
+      },
+      {
+        "target": "FLOWS_AND_API.md",
+        "sha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa"
+      }
+    ]
+  }
+]

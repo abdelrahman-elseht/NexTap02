@@ -1,0 +1,61 @@
+{
+  "reason": "Fresh corrected-definition seed import preserves completed, unapproved documentation work; seed reuse grants no approval.",
+  "reuseCandidateDir": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0",
+  "seedScope": "all-five",
+  "approval": null,
+  "imports": [
+    {
+      "owner": "product",
+      "document": "docs/PRODUCT_SPEC.md",
+      "documentSha256": "0bd509673eb8a44dc051a726037574e164ef4880844e581c22509ee4a7643c55",
+      "sourceArtifact": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/product.json",
+      "sourceSha256": "596f4c64bd0ffe18f9d047ead16036af0db6dc09acdaa740385662b69c27e4ed",
+      "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/product.json",
+      "importedSha256": "99715f8ab9af35c5ec4c03235a19662acca50b62963db1f9071c90292ed14361"
+    },
+    {
+      "owner": "architecture",
+      "document": "docs/ARCHITECTURE.md",
+      "documentSha256": "1a57cf9917e6780e29e343843359ebe7afc581f3e8c312fc63cc87fc926cdd70",
+      "sourceArtifact": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/architecture.json",
+      "sourceSha256": "2beecc45f4869b5d0ff57278be0c0499c5d5875f91d96fc18685c4cb2bef24aa",
+      "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/architecture.json",
+      "importedSha256": "bc92b5869897e10ff149eeb673b15d2f9697ce1b65222e5de8855ab80db7a496"
+    },
+    {
+      "owner": "database",
+      "document": "docs/DATABASE.md",
+      "documentSha256": "992f5da8f61ebd2e04fd3447a214b7ea438a423bfb79bb54bc41a6084d4c3dc4",
+      "sourceArtifact": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/database.json",
+      "sourceSha256": "04dc0c040132f0bf67b4ef1dfb5f1c0f2a93b4e00030f6c707b2984819ec4c6d",
+      "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/database.json",
+      "importedSha256": "2eb035fba2c6b6c123292b72bf21d905c78ca12f1f53f48f089e15ab1069c324"
+    },
+    {
+      "owner": "flows-and-api",
+      "document": "docs/FLOWS_AND_API.md",
+      "documentSha256": "6d43c94fdb176c76d1502b4a34ae9657e41546ae9a15028a20d50935bfdd2bfa",
+      "sourceArtifact": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/flows-and-api.json",
+      "sourceSha256": "0299269a5eab77e3de6c6ec323905d2b5eaa8a8d91f94f163deb0722518fc775",
+      "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/flows-and-api.json",
+      "importedSha256": "77dc6439148f54da658f5224b6c88bcb21d02889904a6eaecf79fd4462858254"
+    },
+    {
+      "owner": "security-and-edge-cases",
+      "document": "docs/SECURITY_AND_EDGE_CASES.md",
+      "documentSha256": "8c973d9a4b7aa38cbb4d86e13b3f0b174c76a6d76096597a209ce36c1a629cf7",
+      "sourceArtifact": ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/security-and-edge-cases.json",
+      "sourceSha256": "7527eb8ff75cb87947501422687c3249a80f70e322b7dd8bb64117e9888d64da",
+      "candidateArtifact": ".atomic/workflows/runs/vision-docs-continuation/14e5e5be-3001-4733-b48b-e0ef3e896d8f/round-0/security-and-edge-cases.json",
+      "importedSha256": "e54e0bb306d32925d4ec77b022ea5da028929a038ad1f350cd28a1f9090d0848"
+    }
+  ],
+  "completedOwners": [
+    "product",
+    "architecture",
+    "database",
+    "flows-and-api",
+    "security-and-edge-cases"
+  ],
+  "pendingOwners": []
+}

@@ -1,0 +1,9 @@
+name = "ex-ap02-main"
+main = ".open-next/worker.js"
+account_id = "a401ce0eabf88b4042e48ba94180234b"
+workers_dev = true
+compatibility_date = "2026-10-04"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "nextap"

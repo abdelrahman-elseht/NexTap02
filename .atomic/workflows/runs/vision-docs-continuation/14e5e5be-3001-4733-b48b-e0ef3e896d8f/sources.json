@@ -1,0 +1,20 @@
+{
+  "originalRunId": "7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8",
+  "sourceHashes": {
+    ".atomic/recovery/accepted-decisions.json": "879a70c63159a523220b2328c63fb183edeca089853d0d998b71d76e2759ee72",
+    ".atomic/recovery/unanswered-batches.json": "8fc8b9ce400037f80a9012e71bcbc9db9b528759fb8f4e3a4b072c2c867f4fe3",
+    "docs/vision.md": "c1f357413a404481fcca215abc3093b3c79dad760b0038d44ad0e8caa42858b5",
+    ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/product.json": "78d10f2d25d0038f8a6d691a280b2c7e99284633b5b7a73d460a1b1c6465d7d5",
+    ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/architecture.json": "9b6e74eb6467fa13326c379033c6240eebbef27804f66c91fceebbe918b7c5ff",
+    ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/database.json": "90ad91c084a52ffb318f4c5ef76a07500adecad3ce2e131fa3852f80c795b0e9",
+    ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/flows-and-api.json": "aa6c0c8ad6718d3a33df0c5bae5035f781878ac6cca2945ea00d4a58c0369fc0",
+    ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8/security-and-edge-cases.json": "cd52c6e169f2bbd2591292c5878ca5416c6f8651ff304c1230b21a621723253d",
+    ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/product.json": "596f4c64bd0ffe18f9d047ead16036af0db6dc09acdaa740385662b69c27e4ed",
+    ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/architecture.json": "2beecc45f4869b5d0ff57278be0c0499c5d5875f91d96fc18685c4cb2bef24aa",
+    ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/database.json": "04dc0c040132f0bf67b4ef1dfb5f1c0f2a93b4e00030f6c707b2984819ec4c6d",
+    ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/flows-and-api.json": "0299269a5eab77e3de6c6ec323905d2b5eaa8a8d91f94f163deb0722518fc775",
+    ".atomic/workflows/runs/vision-docs-continuation/10006fa1-5292-4ab3-9d4b-b5144171947b/round-0/security-and-edge-cases.json": "7527eb8ff75cb87947501422687c3249a80f70e322b7dd8bb64117e9888d64da"
+  },
+  "ledgerPath": ".atomic/recovery/accepted-decisions.json",
+  "sourceDir": ".atomic/workflows/runs/vision-docs/7d321cbd-e1f9-4f2d-b528-0aebf2dbaac8"
+}

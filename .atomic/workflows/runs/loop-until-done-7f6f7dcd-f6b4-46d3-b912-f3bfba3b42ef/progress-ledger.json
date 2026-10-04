@@ -1,0 +1,37 @@
+{
+  "task": "<keepContext>Continue NexTap implementation and Phase 1 verification until all executable readiness criteria are complete or a genuine human-only gate is reached. Treat docs/spec.md, the six phase handoffs, phase-plan, tickets, and all existing evidence packets as authoritative. Preserve hard invariants: fresh authority before every public response, immutable exact Card IDs, lifecycle rules, expectedVersion plus durable idempotency/replay, restricted projections/RLS, private images, atomic audit/history/results, environment isolation, fail-closed uncertainty, and four external gates. Execute all safe work yourself using GPT-6.1 Sol medium workers where needed. Do not use image_generation. Synthetic Card/QR/NFC fixtures may be generated as deterministic text/JSON/URL or local bytes only, clearly marked non-authentic; never close Ticket 02 without authentic samples. Continue adapter/browser, Supabase/Auth/JWT/RLS, transaction/idempotency, fresh cache/authority, R2 image, maintenance, and environment-isolation tracks. Use temporary prefixed resources only, clean up every disposable resource, preserve prior evidence, and never touch production routes/resources. Ask the human only when a new privilege, paid capability, second billable environment, interactive account action, or authentic physical Card/QR/NFC evidence is required. Do not finish with a readiness claim while any executable criterion remains unrun; report BLOCKED with the exact human action instead and remain continuable.</keepContext>",
+  "max_iterations": 20,
+  "status": "active",
+  "iterations_completed": 2,
+  "entries": [{
+    "iteration": 1,
+    "outcome": "Added Next.js 16 proxy method/request-ID gate for public routes.",
+    "changes": ["proxy.js"],
+    "validation": [
+      "npm test: passed, 5 tests",
+      "npm run build: passed; Next.js reports Proxy (Middleware)",
+      "Live npm start HTTP probe: GET/HEAD 200, OPTIONS 204 with Allow, POST 405 with Allow and unique x-request-id",
+      "Live public-route matrix: published and inactive 200, disabled and unknown 404, every response had x-request-id; inactive notice present and internal assignment identifiers absent"
+    ],
+    "failures": ["Adapter/provider/Auth/RLS/transaction/image/cache/maintenance/isolation criteria remain blocked or unrun per prior evidence."],
+    "remaining": ["Run remaining executable adapter paths and provider-backed tracks where safe; request human-only gates only when required."],
+    "timestamp": "2026-10-03"
+  }, {
+    "iteration": 2,
+    "outcome": "Ran a local-only adapter continuation matrix and preserved the prior hosted evidence.",
+    "changes": [".scratch/nextap/phase1-execution/20261003T195142Z/"],
+    "validation": [
+      "npm test: passed, 5 tests",
+      "npm run build: passed on Next.js 16.3.8",
+      "RSC/navigation and prefetch requests returned 200 text/x-component",
+      "OPTIONS/POST method contract passed locally with Allow header",
+      "Redirect, conditional validators, image optimization, and complete request-ID agreement remain blocked; provider-backed B/C tracks remain blocked"
+    ],
+    "failures": ["No canonical redirect or 304/Last-Modified behavior is evidenced; image optimization returned 400 outside proxy matcher; provider bindings/fixtures and additional approved services are unavailable."],
+    "remaining": ["Human approval/access for provider-backed and separately authorized disposable adapter scenarios; authentic printed/encoded samples for Ticket 02."],
+    "timestamp": "2026-10-03T19:51:48Z"
+  }],
+  "progress_curve": [1, 2],
+  "final_trend": "improving",
+  "progress_disclaimer": "Progress scores are a monitoring signal; VOC separation +0.079; never authoritative."
+}

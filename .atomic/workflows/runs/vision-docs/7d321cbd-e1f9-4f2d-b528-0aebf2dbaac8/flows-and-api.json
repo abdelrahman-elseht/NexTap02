@@ -1,0 +1,157 @@
+{
+  "status": "draft",
+  "approval": null,
+  "decisions": [
+    {
+      "key": "foundation.release-actors",
+      "answer": "Admin only (Recommended)",
+      "evidence": "Exact parent-relayed user answer; Product artifact and docs/PRODUCT_SPEC.md",
+      "implication": "Only NexTap Admin management endpoints are in the launch contract; Business Owner login is deferred."
+    },
+    {
+      "key": "foundation.doc-language",
+      "answer": "English docs (Recommended)",
+      "evidence": "Exact parent-relayed user answer",
+      "implication": "This document is written in English."
+    },
+    {
+      "key": "foundation.release-options.analytics",
+      "answer": "Defer analytics (Recommended)",
+      "evidence": "Exact parent-relayed user answer; Product artifact",
+      "implication": "No product scan, click or Visitor event endpoints in v1."
+    },
+    {
+      "key": "foundation.release-options.slug",
+      "answer": "Include /b/{slug} (Recommended)",
+      "evidence": "Exact parent-relayed user answer; Product artifact",
+      "implication": "The independent Business sharing route exists beside permanent /c/{Card ID}."
+    },
+    {
+      "key": "architecture.stack",
+      "answer": "Next.js + Supabase (Recommended)",
+      "evidence": "Exact parent-relayed user answer",
+      "implication": "API conventions may align with the selected stack, but provider capability verification remains required."
+    },
+    {
+      "key": "architecture.hosting",
+      "answer": "Host on Cloudflare",
+      "evidence": "Exact parent-relayed user answer",
+      "implication": "Runtime, cache and revalidation behavior must be verified before promising freshness."
+    },
+    {
+      "key": "database.internal-identifiers",
+      "answer": "Internal UUIDs (Recommended)",
+      "evidence": "Exact parent-relayed user answer; DATABASE.md/database.json",
+      "implication": "Internal UUIDs are separate from public Card IDs."
+    },
+    {
+      "key": "database.import-policy",
+      "answer": "Atomic safe batch (Recommended)",
+      "evidence": "Exact parent-relayed user answer; DATABASE.md/database.json",
+      "implication": "Preview first; reject invalid/intra-file duplicate rows as a whole; skip exact existing tokens unchanged; create new tokens Inactive/unlinked; reject Active requests."
+    }
+  ],
+  "unresolved": [
+    {
+      "key": "api.public-route-contract",
+      "question": "API Q1 — عندما يكون الكارت والنشاط مؤهلين للعرض، أوصي بعرض الصفحة مباشرة على /c/{Card ID}، مع إبقاء /b/{slug} رابط مشاركة مستقل. هل نعرض مباشرة أم نحول الزائر لرابط النشاط؟",
+      "prerequisites": ["foundation.release-options.slug"],
+      "scope": "Only eligible Card responses. Eligibility rules remain Product/Architecture dependencies.",
+      "recommendation": "عرض مباشر (Recommended)",
+      "options": [
+        {"label":"عرض مباشر (Recommended)","description":"يرجع /c صفحة النشاط نفسها دون Redirect؛ لا يعتمد رابط الكارت على slug، ويمكن إعادة استخدام محتوى الصفحة المخزن مؤقتاً."},
+        {"label":"تحويل مؤقت 307","description":"بعد فحص الكارت، ينتقل الزائر إلى /b/{slug} الحالي. التحويل نفسه لا يخزن طويلاً؛ وجهة الصفحة تتغير عند تغيير slug."},
+        {"label":"تأجيل هذا العقد","description":"تبقى طريقة الرد غير محسومة في Draft ومعلومة كشرط قبل التنفيذ؛ لا نفترض عرضاً أو تحويلاً."}
+      ],
+      "answer": null,
+      "status": "sent_to_parent_awaiting_exact_user_relay"
+    },
+    {
+      "key": "api.admin-operation-contract",
+      "question": "API Q2 — أوصي بعقد HTTP/JSON خاص بواجهة Admin على /api/admin، مع مسارات موارد للقراءة/التعديل وعمليات صريحة لربط وتفعيل الكارت. هل نوثق هذا العقد أم نعتمد إجراءات Next.js الداخلية دون API مستقل؟",
+      "prerequisites": ["foundation.release-actors"],
+      "scope": "Transport and resource pattern only. Exact domain operation contracts depend on lifecycle, publication and content shape.",
+      "recommendation": "HTTP/JSON للـAdmin (Recommended)",
+      "options": [
+        {"label":"HTTP/JSON للـAdmin (Recommended)","description":"API داخلي للإدارة، ليس SDK عاماً؛ UUID في مراجع الإدارة وCard ID فقط في الروابط العامة؛ GET للقراءة وPOST للأوامر وPATCH للحقول وPUT لترتيب مجموعة كاملة."},
+        {"label":"Server Actions فقط","description":"نفس الصلاحيات وقواعد المجال، لكن عمليات الإدارة إجراءات داخل Next.js دون مسارات HTTP عامة موثقة؛ لا يلزم REST API للإدارة."},
+        {"label":"تأجيل هذا العقد","description":"توثق الرحلات والعمليات المنطقية فقط الآن؛ تصميم HTTP وتفاصيل التنفيذ تبقى مفتوحة بوضوح."}
+      ],
+      "answer": null,
+      "status": "sent_to_parent_awaiting_exact_user_relay"
+    },
+    {
+      "key": "api.error-envelope",
+      "question": "API Q3 — لأخطاء عمليات الإدارة، أوصي بصيغة JSON موحدة تضم code ثابتاً وmessage آمناً وfieldErrors اختيارية وrequestId. أي صيغة نعتمد؟ تفاصيل الحالات العامة والصلاحيات ستلتزم بقرارات Product وSecurity لاحقاً.",
+      "prerequisites": [],
+      "scope": "Admin error representation only. Public lifecycle disclosure and status mapping remain dependencies.",
+      "recommendation": "JSON موحد (Recommended)",
+      "options": [
+        {"label":"JSON موحد (Recommended)","description":"{error:{code,message,fieldErrors?,requestId}}؛ أكواد قابلة لاعتماد الواجهة عليها، لا stack traces أو أسرار؛ رسائل العربية/الإنجليزية مسؤولية الواجهة."},
+        {"label":"Problem Details","description":"application/problem+json بصيغة RFC 9457، مع امتدادات code وfieldErrors وrequestId؛ عقد معياري لكنه أطول."},
+        {"label":"تأجيل هذا العقد","description":"صيغة الأخطاء لا تصبح معياراً بعد؛ تظل اقتراحاً وشرطاً قبل التنفيذ."}
+      ],
+      "answer": null,
+      "status": "sent_to_parent_awaiting_exact_user_relay"
+    },
+    {
+      "key": "api.import-format",
+      "question": "API Q4 — الرؤية تذكر IDs موجودة في Excel، لكن لا يوجد الملف في المستودع. أوصي بقبول CSV UTF-8 بعمود card_id وstatus اختياري يجب أن يكون Inactive، مع معاينة وتأكيد الدفعة الآمنة المعتمدة. هل نحتاج أيضاً رفع XLSX مباشرة؟",
+      "prerequisites": ["database.import-policy"],
+      "recommendation": "CSV فقط (Recommended)",
+      "options": [
+        {"label":"CSV فقط (Recommended)","description":"Admin يصدر CSV من Excel؛ صيغة بسيطة، يحفظ Card ID كما هو، لا يعيد توليده؛ حدود الحجم والصفوف ستحددها Security."},
+        {"label":"CSV وXLSX","description":"رفع workbook أيضاً، مع sheet محدد وعناوين أعمدة صريحة؛ لا صيغ تنفيذية أو macros؛ تعقيد parsing وحماية إضافيان."},
+        {"label":"تأجيل صيغة الملف","description":"سياسة الدفعة تظل معتمدة، لكن file format ينتظر ملفاً نموذجياً قبل التنفيذ؛ لا استنتاج من غياب الملف."}
+      ],
+      "answer": null,
+      "status": "sent_to_parent_awaiting_exact_user_relay"
+    },
+    {
+      "key": "api.mutation-publication",
+      "question": "What should a successful Admin mutation promise about public visibility?",
+      "prerequisites": ["foundation.business-publication", "architecture.resolver-cache", "database.write-concurrency"],
+      "recommendation": "Return a durable revision plus an explicit delivery freshness result; a committed save must not be reported as rolled back if only cache refresh fails.",
+      "status": "not_asked_prerequisites_pending"
+    },
+    {
+      "key": "api.idempotency-concurrency",
+      "question": "How should retried Admin mutations and concurrent edits be protected?",
+      "prerequisites": ["database.write-concurrency", "security replay and retention policy"],
+      "recommendation": "Require an expected revision for edits and idempotency keys for retried workflow commands, returning 409 on stale state.",
+      "status": "not_asked_prerequisites_pending"
+    },
+    {
+      "key": "api.http-status-contract",
+      "question": "Confirm HTTP statuses for public lifecycle states and Admin validation, conflict, upload and availability outcomes.",
+      "prerequisites": ["foundation.card-lifecycle", "foundation.business-publication", "database.write-concurrency", "security policy"],
+      "status": "not_asked_prerequisites_pending"
+    }
+  ],
+  "consistency": {
+    "status": "not_started",
+    "rounds_allowed": 1,
+    "notes": "Draft published before the security draft and before the required bounded cross-document exchange."
+  },
+  "amendments": [
+    {
+      "text": "All questions and approvals must appear in the parent/orchestrator chat. Exact parent-relayed answers are valid evidence; stage-local questions, peer messages and silence are not.",
+      "evidence": "Authoritative user amendment relayed by parent"
+    },
+    {
+      "text": "Product's initial stage-local foundation question attempt was aborted and grants no consent. This API stage has made no local question-tool attempt.",
+      "evidence": "Product coordination message; this stage tool history"
+    }
+  ],
+  "question_batches_sent": [
+    {
+      "batch": "flows-api-round-1",
+      "keys": ["api.public-route-contract", "api.admin-operation-contract", "api.error-envelope", "api.import-format"],
+      "to": "d7495b13-a37e-4ed3-ba55-a41dcab583bc",
+      "delivery": "Intercom send succeeded; attached flows-api-round-1.json contains exact Arabic questions/options",
+      "status": "awaiting_actual_parent_presented_answers"
+    }
+  ],
+  "sources": ["docs/vision.md", "docs/PRODUCT_SPEC.md", "docs/DATABASE.md", "docs/ARCHITECTURE.md", ".atomic/vision-docs-setup.md"],
+  "document": "docs/FLOWS_AND_API.md"
+}
