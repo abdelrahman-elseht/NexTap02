@@ -3,7 +3,8 @@ import { randomBytes, randomUUID } from 'node:crypto';
 import QRCode from 'qrcode';
 import { fileURLToPath } from 'node:url';
 
-const root = new URL('../fixtures/ticket02/', import.meta.url);
+const outputArgument = process.argv[2];
+const root = outputArgument ? new URL(`file://${outputArgument.replace(/\\/g, '/').replace(/\/$/, '')}/`) : new URL('../fixtures/ticket02/', import.meta.url);
 const token = () => randomBytes(16).toString('base64url');
 const rows = [
   { card_id: token(), status: 'Inactive', label: 'quoted, whitespace' },
@@ -19,7 +20,7 @@ const csv = [
   'card_id,status,label',
   ...rows.map(row => [row.card_id, row.status, row.label].map(csvCell).join(','))
 ].join('\n') + '\n';
-const base = new URL('../fixtures/ticket02/', import.meta.url);
+const base = root;
 await mkdir(base, { recursive: true });
 await writeFile(new URL('synthetic-inventory.csv', base), csv, 'utf8');
 const qrRows = [];
