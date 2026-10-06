@@ -1,0 +1,62 @@
+{
+  "fixture_kind": "synthetic-ticket-02-preparation",
+  "authenticity": "NON-AUTHENTIC SYNTHETIC; DOES NOT PROVE PHYSICAL INVENTORY OR PROVENANCE",
+  "physical_inventory_status": "BLOCKED_PENDING_HUMAN_APPLICABILITY_DECISION",
+  "token_policy": "prospective tokens use crypto.randomBytes(16) = 128 bits; exact imported text is preserved",
+  "uuid_separation": {
+    "internal_uuid": "630b7642-0a3a-412c-8f6e-aea25cbd9ac9",
+    "public_tokens_are_not_uuid": true
+  },
+  "auth_recovery_authority": false,
+  "qr_encoder": "qrcode npm package",
+  "csv": {
+    "path": "synthetic-inventory.csv",
+    "rows": 6,
+    "quoted_roundtrip": true
+  },
+  "qr": [
+    {
+      "index": 1,
+      "token": "5zwW-bDCKDipLz8tFyVRZw",
+      "payload": "https://nextap.services/c/5zwW-bDCKDipLz8tFyVRZw",
+      "route": "/c/5zwW-bDCKDipLz8tFyVRZw",
+      "compatible": true
+    },
+    {
+      "index": 2,
+      "token": "  x-0aZaydYawHsCnJy7ETEw  ",
+      "payload": "https://nextap.services/c/  x-0aZaydYawHsCnJy7ETEw  ",
+      "route": "/c/  x-0aZaydYawHsCnJy7ETEw  ",
+      "compatible": true
+    },
+    {
+      "index": 3,
+      "token": "Case-q3a8AOOFOxjb6UJ39XHJ6A",
+      "payload": "https://nextap.services/c/Case-q3a8AOOFOxjb6UJ39XHJ6A",
+      "route": "/c/Case-q3a8AOOFOxjb6UJ39XHJ6A",
+      "compatible": true
+    },
+    {
+      "index": 4,
+      "token": "مصر-TmUHBCwx456-MkTzqMtXEw-東京",
+      "payload": "https://nextap.services/c/مصر-TmUHBCwx456-MkTzqMtXEw-東京",
+      "route": "/c/مصر-TmUHBCwx456-MkTzqMtXEw-東京",
+      "compatible": true
+    },
+    {
+      "index": 5,
+      "token": "GooCfQ8TpgdVKzaVHuzwvw",
+      "payload": "https://nextap.services/wrong/GooCfQ8TpgdVKzaVHuzwvw",
+      "route": "/wrong/GooCfQ8TpgdVKzaVHuzwvw",
+      "compatible": false
+    },
+    {
+      "index": 6,
+      "token": "toSCcm9JFAPW-mqkiki_uw",
+      "payload": "https://nextap.services/c/toSCcm9JFAPW-mqkiki_uw",
+      "route": "/c/toSCcm9JFAPW-mqkiki_uw",
+      "compatible": true
+    }
+  ],
+  "hosted_worker_503": "BLOCKED_SEPARATE_GATE; NOT TESTED OR WEAKENED"
+}
